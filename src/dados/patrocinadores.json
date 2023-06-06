@@ -1,0 +1,16 @@
+{
+  "diamante": [
+  ],
+  "ouro": [],
+  "prata": [],
+  "bronze": [],
+  "apoio": [],
+  "example": [
+    {
+      "name": "Seja um patrocinador",
+      "image": "./src/components/images/patrocinadores/logo.png",
+      "aspectRatio": "1:1",
+      "link": "#"
+    }
+  ]
+}

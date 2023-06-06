@@ -1,0 +1,744 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/images/logo.astro";
+import palestrantes from "../dados/palestrantes.json";
+import patrocinadores from "../dados/patrocinadores.json";
+import { Picture } from "@astrojs/image/components";
+import SectionPatrocinio from "../components/SectionPatrocinio.astro";
+---
+
+<script>
+  let isMobileOpen = false;
+  function toggleMobileMenu() {
+    isMobileOpen = !isMobileOpen;
+    let menu = document.getElementById("mobile-menu");
+    if (isMobileOpen) {
+      menu?.classList.remove("hidden");
+    } else {
+      menu?.classList.add("hidden");
+    }
+  }
+
+  const hamburger = document.getElementById("mobile-menu-button");
+  hamburger?.addEventListener("click", toggleMobileMenu);
+</script>
+
+<Layout title="Interagil 2023 - 27/05">
+  <nav class="bg-white shadow fixed z-50 w-full">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 justify-between">
+        <div
+          class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
+        >
+          <div class="inset-y-0 left-0 flex items-center md:hidden">
+            <!-- Mobile menu button -->
+            <button
+              type="button"
+              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-700"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              id="mobile-menu-button"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+              <svg
+                class="block h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+              </svg>
+              <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+              <svg
+                class="hidden h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-shrink-0 items-center justify-center flex-1 md:flex-none"
+          >
+            <a href="#">
+              <Logo class="block h-32 w-auto" alt="Interagil" />
+            </a>
+          </div>
+          <div class="hidden md:ml-6 md:flex md:justify-around flex-1">
+            <!-- Current: "border-primary-700 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+            <a
+              href="#evento"
+              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >Evento</a
+            >
+            <a
+              href="#palestrantes"
+              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >Palestrantes</a
+            >
+            <a
+              href="#programacao"
+              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >Programação</a
+            >
+            <a
+              href="#patrocinadores"
+              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >Patrocinadores</a
+            >
+            <a
+              href="#local"
+              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >Local</a
+            >
+            <a
+              href="#local"
+              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
+              >Contato</a
+            >
+          </div>
+          <div class="flex ml-auto">
+            <a
+              href="#"
+              target="_blank"
+              class="self-center rounded-md bg-primary-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+              >Ingressos
+              <svg
+                class="inline"
+                width="1.5em"
+                height="1.5em"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M22 6.5C22 5.39543 21.1046 4.5 20 4.5H18C17.7391 4.51101 17.5151 4.68921 17.4457 4.941C17.2419 5.78442 16.487 6.37857 15.6194 6.37855C14.7517 6.37854 13.9968 5.78435 13.793 4.94093C13.7237 4.68918 13.4997 4.511 13.2388 4.5H4C2.89543 4.5 2 5.39543 2 6.5V17.5C2 18.6046 2.89543 19.5 4 19.5H13.2388C13.4997 19.489 13.7237 19.3108 13.793 19.0591C13.9968 18.2157 14.7517 17.6215 15.6194 17.6215C16.487 17.6214 17.2419 18.2156 17.4457 19.059C17.5151 19.3108 17.7391 19.489 18 19.5H20C21.1046 19.5 22 18.6046 22 17.5V6.5Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M15.5 15.25V14.75"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M15.5 12.25V11.75"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M15.5 9.25V8.75"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden md:hidden" id="mobile-menu">
+      <div class="space-y-1 pt-2 pb-4">
+        <!-- Current: "bg-primary-50 border-primary-700 text-primary-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+        <a
+          href="#"
+          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+          >Interagil</a
+        >
+        <a
+          href="#evento"
+          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+          >Evento</a
+        >
+        <a
+          href="#palestrantes"
+          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+          >Palestrantes</a
+        >
+        <a
+          href="#programacao"
+          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+          >Programação</a
+        >
+        <a
+          href="#patrocinadores"
+          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+          >Patrocinadores</a
+        >
+        <a
+          href="#local"
+          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+          >Local</a
+        >
+        <a
+          href="#contato"
+          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+          >Contato</a
+        >
+      </div>
+    </div>
+  </nav>
+
+  <main class="pb-20 bg-white">
+    <section id="evento">
+      <div class="relative bg-white">
+        <div class="mx-auto max-w-7xl">
+          <div class="relative z-10 lg:w-full lg:max-w-2xl">
+            <div class="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0">
+              <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                <h1
+                  class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"
+                >
+                  <span class="text-primary-400">Vivencie a</span>
+                  <span>transformacao agil no interior</span>
+                  <time datetime="2023-05-27">27/05</time>
+                </h1>
+                <h2 class="text-center"></h2>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Conheça a força da agilidade no interior de São Paulo e
+                  participe do Interágil!
+                </p>
+                <div
+                  class="mt-10 flex items-center gap-x-6 justify-center sm:justify-start"
+                >
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                    >Reserve seu ingresso</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <Picture
+            class="aspect-[3/2] object-cover w-full lg:aspect-auto lg:h-full lg:w-full"
+            widths={[100, 200, 400, 800, 1280]}
+            aspectRatio="1:1"
+            sizes={""}
+            src="/images/background.png"
+            alt="pessoas em anfiteatro ouvindo uma palestra"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="evento">
+      <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto lg:mx-0 lg:max-w-none">
+            <div class="flex-shrink-0 mr-8 lg:hidden"></div>
+            <div>
+              <p class="text-base font-semibold leading-7 text-primary-700">
+                O evento
+              </p>
+              <h1
+                class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                O Interágil está de volta!
+              </h1>
+              <h2 class="text-base mb-6">
+                Conectando pessoas, impulsionando projetos: A agilidade com
+                força total.
+              </h2>
+              <div class="columns-2 text-justify gap-20">
+                <p class="mb-4">
+                  O InterÁgil está de volta em 2023 para sua aguardada 5ª
+                  edição! Após uma breve pausa, retomamos com toda a energia
+                  para oferecer o melhor evento de Agilidade da região.
+                </p>
+                <p class="mb-4">
+                  Nos últimos tempos, enfrentamos desafios globais inesperados,
+                  mas nunca perdemos a determinação de trazer uma experiência
+                  excepcional para a comunidade ágil. Agora é o momento de nos
+                  reunirmos novamente, renovados e prontos para avançar.
+                </p>
+                <p class="mb-4">
+                  Neste ano, continuaremos no inspirador ONOVOLAB, o local que
+                  incentiva a inovação em nossa região.
+                </p>
+                <p class="mb-4">
+                  A expectativa é receber um público de aproximadamente 300
+                  pessoas, vindas de diversas cidades, incluindo Araraquara, São
+                  Carlos, Campinas, Ribeirão Preto e São José do Rio Preto.
+                </p>
+                <p class="mb-4">
+                  Prepare-se para uma jornada repleta de aprendizado, conexões
+                  valiosas e inspiração. A 5ª edição do Interágil será um marco
+                  na nossa história, trazendo palestrantes experientes,
+                  workshops envolventes e insights sobre as últimas tendências
+                  ágeis.
+                </p>
+                <p>
+                  Não perca a oportunidade de fazer parte deste renascimento e
+                  impulsionar seus projetos com o poder da agilidade. Junte-se a
+                  nós no InterÁgil 2023 e embarque nessa jornada extraordinária!
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex-shrink-0 ml-36 hidden lg:block opacity-10 self-center"
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="ingressos-cta">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24">
+          <div>
+            <p class="text-lg font-bold mb-2">
+              O primeiro lote já está disponível!
+            </p>
+            <p class="text-lg">
+              Garanta seu lugar e faça parte da transformação ágil no interior!
+            </p>
+          </div>
+          <div class="flex justify-center items-center flex-1">
+            <a
+              href="#"
+              target="_blank"
+              class="whitespace-nowrap rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+              >Adquirir ingressos</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="palestrantes">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 py-14">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+          <p class="relative text-sm leading-6 text-primary-700 font-bold">
+            Palestrantes
+          </p>
+          <h2
+            class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Mentes ágeis compartilhando insights
+          </h2>
+          <h3 class="text-base mb-6">
+            Conectando pessoas, impulsionando projetos: A agilidade com força
+            total.
+          </h3>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            Este ano estamos trazendo um elenco fantástico de palestrantes para
+            nosso evento! Se você é apaixonado por tecnologia e inovação, não
+            perca a oportunidade de aprender com especialistas.
+          </p>
+          <p class="text-lg leading-8 text-gray-600">
+            Ainda temos algumas surpresas a serem anunciadas, então acompanhe
+            nossos canais para ficar por dentro de todas as atualizações..
+          </p>
+        </div>
+        <ul
+          role="list"
+          class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+        >
+          {
+            palestrantes.map((palestrante) => {
+              return (
+                <li class="flex flex-col">
+                  <Picture
+                    class="w-full aspect-[14/15]"
+                    widths={[346, 600]}
+                    sizes="(max-width: 639px) 600px, 346px"
+                    aspectRatio="14:15"
+                    src={palestrante.image}
+                    alt={palestrante.name}
+                  />
+                  <ul role="list" class="mt-2 flex gap-x-2 h-5">
+                    {palestrante.twitter && (
+                      <li>
+                        <a
+                          href={palestrante.twitter}
+                          class="text-gray-400 hover:text-gray-500"
+                          target="_blank"
+                        >
+                          <span class="sr-only">Twitter</span>
+                          <svg
+                            class="h-5 w-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            aria-hidden="true"
+                          >
+                            <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                          </svg>
+                        </a>
+                      </li>
+                    )}
+                    {palestrante.linkedin && (
+                      <li>
+                        <a
+                          href={palestrante.linkedin}
+                          class="text-gray-400 hover:text-gray-500"
+                          target="_blank"
+                        >
+                          <span class="sr-only">LinkedIn</span>
+                          <svg
+                            class="h-5 w-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    )}
+                    {palestrante.github && (
+                      <li>
+                        <a
+                          href={palestrante.github}
+                          class="text-gray-400 hover:text-gray-500"
+                          target="_blank"
+                        >
+                          <span class="sr-only">Github</span>
+                          <svg
+                            class="h-5 w-5"
+                            fill="currentColor"
+                            viewBox="0 0 100 100"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    )}
+                    {palestrante.site && (
+                      <li>
+                        <a
+                          href={palestrante.site}
+                          class="text-gray-400 hover:text-gray-500"
+                          target="_blank"
+                        >
+                          <span class="sr-only">Site</span>
+                          <svg
+                            class="h-5 w-5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="2 2 20 20"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    )}
+                  </ul>
+                  {palestrante.name && (
+                    <p class="text-lg font-semibold tracking-tight text-gray-900">
+                      {palestrante.name}
+                    </p>
+                  )}
+                  {palestrante.company && (
+                    <p class="text-base text-primary-500">
+                      {palestrante.company}
+                    </p>
+                  )}
+                  {palestrante.role && (
+                    <p class="text-base text-primary-700">{palestrante.role}</p>
+                  )}
+                  {palestrante.about && (
+                    <p class="text-base text-gray-600 flex-1">
+                      {palestrante.about}
+                    </p>
+                  )}
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section id="programacao">
+      <div class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mb-10">
+            <p class="relative text-sm leading-6 text-primary-700 font-bold">
+              Programação
+            </p>
+            <h2
+              class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              Uma jornada repleta de conhecimento e práticas ágeis
+            </h2>
+            <h3 class="text-base mb-6">
+              Conheça o roteiro emocionante que irá impulsionar sua
+              transformação ágil
+            </h3>
+          </div>
+          <div>
+            <style>
+              .contents input {
+                display: none;
+              }
+
+              .tab {
+                display: none;
+              }
+
+              #tab1:checked ~ .content1,
+              #tab2:checked ~ .content2,
+              #tab3:checked ~ .content3 {
+                display: block;
+              }
+
+              .tabs-root:has(.contents #tab1:checked) nav label:nth-of-type(1),
+              .tabs-root:has(.contents #tab2:checked) nav label:nth-of-type(2),
+              .tabs-root:has(.contents #tab3:checked) nav label:nth-of-type(3) {
+                color: #68c4a9;
+                font-weight: 700;
+                border-color: currentColor;
+              }
+            </style>
+            <div class="sm:block tabs-root">
+              <div class="border-b border-gray-200">
+                <nav class="-mb-px flex justify-center" aria-label="Tabs">
+                  <label
+                    for="tab1"
+                    class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                    >Auditório principal</label
+                  >
+
+                  <label
+                    for="tab2"
+                    class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                    >Coworking</label
+                  >
+
+                  <label
+                    for="tab3"
+                    class="font-bold border-transparent text-gray-500 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                    aria-current="page">Espaço Móvile</label
+                  >
+                </nav>
+              </div>
+              <div class="contents">
+                <input type="radio" name="tabs" id="tab1" checked="checked" />
+                <div class="tab content1 px-2 sm:px-10 lg:px-40 md:px-20">
+                  <p>Sera anunciado em breve.</p>
+                </div>
+                <input type="radio" name="tabs" id="tab2" />
+                <div class="tab content2 px-2 sm:px-10 lg:px-40 md:px-20">
+                  <p>Sera anunciado em breve.</p>
+                </div>
+                <input type="radio" name="tabs" id="tab3" />
+                <div class="tab content3 px-2 sm:px-10 lg:px-40 md:px-20">
+                  <p>Sera anunciado em breve.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="patrocinadores">
+      <div class="bg-white py-14">
+        <!-- <div class="mx-auto max-w-7xl px-6 lg:px-8 mb-8"> -->
+        <!--   <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none"> -->
+        <!--     <p class="relative text-sm leading-6 text-primary-700 font-bold"> -->
+        <!--       Patrocinadores -->
+        <!--     </p> -->
+        <!--     <h2 -->
+        <!--       class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" -->
+        <!--     > -->
+        <!--       Parceiros que impulsionam a Agilidade Juntos -->
+        <!--     </h2> -->
+        <!--     <h3 class="text-base mb-6"> -->
+        <!--       Junte-se às empresas que apoiam a inovação e o progresso ágil -->
+        <!--     </h3> -->
+        <!--   </div> -->
+        <!-- </div> -->
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionPatrocinio
+            patrocinadores={patrocinadores.diamante}
+            imageClass="h-32"
+            titulo="Diamante"
+          />
+          <SectionPatrocinio
+            patrocinadores={patrocinadores.ouro}
+            imageClass="h-24 max-w-[240px]"
+            titulo="Ouro"
+          />
+          <SectionPatrocinio
+            patrocinadores={patrocinadores.prata}
+            titulo="Prata"
+          />
+          <SectionPatrocinio
+            patrocinadores={patrocinadores.bronze}
+            titulo="Bronze"
+          />
+          <div class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24">
+            <div>
+              <p class="text-lg font-bold mb-2">
+                Torne-se um Patrocinador do Interágil
+              </p>
+              <p class="text-lg">
+                Faça parte do evento que está impulsionando a agilidade na
+                região e amplie sua visibilidade agente da transformação ágil!
+              </p>
+            </div>
+            <div class="flex justify-center items-center flex-1">
+              <a
+                href="#"
+                target="_blank"
+                class="whitespace-nowrap rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                >Quero ser um patrocinador</a
+              >
+            </div>
+          </div>
+          <SectionPatrocinio
+            patrocinadores={patrocinadores.apoio}
+            titulo="Apoio"
+            imageClass="h-20"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="googleMaps bg-white" id="local">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+          <div class="grid grid-cols-2 mb-10">
+            <div>
+              <p class="relative text-sm leading-6 text-primary-700 font-bold">
+                Local
+              </p>
+              <h2
+                class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Onde vai ser
+              </h2>
+              <h3 class="text-base mb-6">
+                Escolhemos um dos melhores locais da região
+              </h3>
+            </div>
+            <div>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                >
+                  <rect width="48" height="48" rx="10" fill="#68C4A9"></rect>
+                  <path
+                    d="M24 24.5C25.6569 24.5 27 23.1569 27 21.5C27 19.8431 25.6569 18.5 24 18.5C22.3431 18.5 21 19.8431 21 21.5C21 23.1569 22.3431 24.5 24 24.5Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M24 34C26 30 32 27.4183 32 22C32 17.5817 28.4183 14 24 14C19.5817 14 16 17.5817 16 22C16 27.4183 22 30 24 34Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+                <span class="ml-4 font-bold">Onovolab</span>
+              </div>
+              <address class="ml-16 not-italic text-gray-600">
+                R. Aquidaban, 1 - Centro, São Carlos - SP, 13560-120, Brasil
+              </address>
+            </div>
+          </div>
+          <iframe
+            title="Mapa para o local do evento"
+            width="100%"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyClU207VMjBcRJah9dDSzmtqVbXTcBP4SE&q=place_id:ChIJbb64Bj13uJQRNy5vEyKzwo8"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <section id="contato" class="text-center">
+      <div class="flex justify-center">
+        <Logo class="block h-32 w-auto" alt="Interagil" />
+      </div>
+      <p class="font-bold text-2xl">Ficou alguma dúvida? Fale com a gente!</p>
+      <p class="mb-6">
+        Envie um email ou mensagem de whatsapp para falar com um dos nossos
+        organizadores.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a
+          href="#"
+          target="_blank"
+          class="rounded-md border-2 border-grey-900 px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+          >Enviar email</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          class="rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+          >Mensagem WhatsApp</a
+        >
+      </div>
+    </section>
+  </main>
+  <footer class="py-10 w-full">
+    <div
+      class="text-gray-500 justify-between items-center mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex flex-col sm:flex-row"
+    >
+      <span>© 2023 Interágil. Todos os direitos reservados</span>
+      <div>
+        <a href="#">Política de Privacidade</a>
+        <a class="ml-4" href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+</Layout>
