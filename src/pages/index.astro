@@ -272,7 +272,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
                 Conectando pessoas, impulsionando projetos: A agilidade com
                 força total.
               </h2>
-              <div class="columns-2 text-justify gap-20">
+              <div class="md:columns-2 text-justify gap-20">
                 <p class="mb-4">
                   O InterÁgil está de volta em 2023 para sua aguardada 5ª
                   edição! Após uma breve pausa, retomamos com toda a energia
@@ -317,7 +317,9 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
     </section>
     <section id="ingressos-cta">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24">
+        <div
+          class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24 flex-col md:flex-row"
+        >
           <div>
             <p class="text-lg font-bold mb-2">
               O primeiro lote já está disponível!
@@ -618,7 +620,9 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
             patrocinadores={patrocinadores.bronze}
             titulo="Bronze"
           />
-          <div class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24">
+          <div
+            class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24 flex-col md:flex-row"
+          >
             <div>
               <p class="text-lg font-bold mb-2">
                 Torne-se um Patrocinador do Interágil
@@ -649,7 +653,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
     <section class="googleMaps bg-white" id="local">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <div class="grid grid-cols-2 mb-10">
+          <div class="grid md:grid-cols-2 mb-10">
             <div>
               <p class="relative text-sm leading-6 text-primary-700 font-bold">
                 Local
@@ -705,7 +709,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
         </div>
       </div>
     </section>
-    <section id="contato" class="text-center">
+    <section id="contato" class="text-center px-6 lg:px-8" ">
       <div class="flex justify-center">
         <Logo class="block h-32 w-auto" alt="Interagil" />
       </div>
