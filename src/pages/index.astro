@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Logo from "../components/images/logo.astro";
 import CtaBanner from "../components/cta-banner.astro";
 import SectionHeader from "../components/section-header.astro";
+import Palestra from "../components/palestra.astro";
 import palestrantes from "../dados/palestrantes.json";
 import patrocinadores from "../dados/patrocinadores.json";
 import { Picture } from "@astrojs/image/components";
@@ -337,34 +338,66 @@ import Nav from "../components/Nav.astro";
                 <label
                   for="tab1"
                   class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
-                  >Auditório principal</label
+                  >Palco principal</label
                 >
 
                 <label
                   for="tab2"
                   class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
-                  >Coworking</label
+                  >Palco 2</label
                 >
 
                 <label
                   for="tab3"
                   class="font-bold border-transparent text-gray-500 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
-                  aria-current="page">Espaço Móvile</label
+                  aria-current="page">Palco 3</label
                 >
               </nav>
             </div>
             <div class="contents">
               <input type="radio" name="tabs" id="tab1" checked="checked" />
               <div class="tab content1 px-2 sm:px-10 lg:px-40 md:px-20">
-                <p>Sera anunciado em breve.</p>
+                <Palestra title="Credenciamento + Cofee" start="08:00" end="09:00">
+                  Chegue cedo, colete seus brindes e conheça novas pessoas.
+                </Palestra>
+                <Palestra title="Keynote 1" start="09:00" end="09:45">
+                </Palestra>
+                <Palestra title="Palestra 1" start="09:45" end="10:30">
+                </Palestra>
+                <Palestra title="Coffee Break" start="10:30" end="11:00">
+                </Palestra>
+                <Palestra title="Palestra 2" start="11:00" end="11:45">
+                </Palestra>
+                <Palestra title="Palestra 3" start="11:45" end="12:30">
+                </Palestra>
+                <Palestra title="Almoço" start="12:45" end="14:15">
+                </Palestra>
+                <Palestra title="Palestra 4" start="14:15" end="15:00">
+                </Palestra>
+                <Palestra title="Palestra 5" start="15:00" end="15:45">
+                </Palestra>
+                <Palestra title="Coffee Break" start="15:45" end="16:15">
+                </Palestra>
+                <Palestra title="Keynote 2" start="16:15" end="17:00">
+                </Palestra>
+                <Palestra title="Encerramento" start="17:15" end="17:30">
+                </Palestra>
               </div>
               <input type="radio" name="tabs" id="tab2" />
               <div class="tab content2 px-2 sm:px-10 lg:px-40 md:px-20">
-                <p>Sera anunciado em breve.</p>
+                <Palestra title="Workshop 1" start="09:45" end="12:30">
+                  Com pausa para Coffee Break das 10:30 até 11:00
+                </Palestra>
+                <Palestra title="Workshop 2" start="14:15" end="15:45">
+                </Palestra>
               </div>
               <input type="radio" name="tabs" id="tab3" />
               <div class="tab content3 px-2 sm:px-10 lg:px-40 md:px-20">
-                <p>Sera anunciado em breve.</p>
+                <Palestra title="Workshop 3" start="09:45" end="12:30">
+                  Com pausa para Coffee Break das 10:30 até 11:00
+                </Palestra>
+                <Palestra title="Workshop 4" start="14:15" end="15:45">
+                </Palestra>
               </div>
             </div>
           </div>
