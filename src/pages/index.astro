@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Logo from "../components/images/logo.astro";
 import CtaBanner from "../components/cta-banner.astro";
+import SectionHeader from "../components/section-header.astro";
 import palestrantes from "../dados/palestrantes.json";
 import patrocinadores from "../dados/patrocinadores.json";
 import { Picture } from "@astrojs/image/components";
@@ -32,7 +33,7 @@ import Nav from "../components/Nav.astro";
     <section id="evento">
       <div class="relative bg-white">
         <div class="mx-auto max-w-7xl">
-          <div class="relative z-10 lg:w-full lg:max-w-2xl">
+          <div class="relative z-10 lg:w-full lg:max-w-[50%]">
             <div class="relative py-32 px-6 sm:py-40 lg:py-56 lg:px-8 lg:pr-0">
               <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                 <h1
@@ -51,7 +52,7 @@ import Nav from "../components/Nav.astro";
                   class="mt-10 flex items-center gap-x-6 justify-center sm:justify-start"
                 >
                   <a
-                    href="#"
+                    href="https://www.sympla.com.br/evento/interagil-2023/2136272?_gl=1*gpe6jc*_ga*MTc2NDA3NTQxLjE2OTI5OTQxNjc.*_ga_KXH10SQTZF*MTY5Mjk5NDE2Ny4xLjEuMTY5Mjk5NTEwNC4wLjAuMA"
                     target="_blank"
                     class="rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                     >Reserve seu ingresso</a
@@ -79,19 +80,11 @@ import Nav from "../components/Nav.astro";
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto lg:mx-0 lg:max-w-none">
             <div class="flex-shrink-0 mr-8 lg:hidden"></div>
-            <div>
-              <p class="text-base font-semibold leading-7 text-primary-400">
-                O evento
-              </p>
-              <h1
-                class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-              >
-                O Interágil está de volta!
-              </h1>
-              <h2 class="text-xl mb-6 text-gray-600">
-                Conectando pessoas, impulsionando projetos: A agilidade com
-                força total.
-              </h2>
+            <SectionHeader
+              headline="O evento"
+              title="O Interágil está de volta!"
+              subtitle="Conectando pessoas, impulsionando projetos: A agilidade com força total."
+            >
               <div class="md:columns-2 text-justify gap-20 text-gray-600">
                 <p class="mb-4">
                   O InterÁgil está de volta em 2023 para sua aguardada 5ª
@@ -126,11 +119,7 @@ import Nav from "../components/Nav.astro";
                   nós no InterÁgil 2023 e embarque nessa jornada extraordinária!
                 </p>
               </div>
-            </div>
-            <div
-              class="flex-shrink-0 ml-36 hidden lg:block opacity-10 self-center"
-            >
-            </div>
+            </SectionHeader>
           </div>
         </div>
       </div>
@@ -139,7 +128,7 @@ import Nav from "../components/Nav.astro";
       <CtaBanner 
         title="O primeiro lote já está disponível!"
         text="Garanta seu lugar e faça parte da transformação ágil no interior!"
-        href=""
+        href="https://www.sympla.com.br/evento/interagil-2023/2136272?_gl=1*gpe6jc*_ga*MTc2NDA3NTQxLjE2OTI5OTQxNjc.*_ga_KXH10SQTZF*MTY5Mjk5NDE2Ny4xLjEuMTY5Mjk5NTEwNC4wLjAuMA"
         cta="Adquirir ingressos"
       />
     </section>
@@ -147,27 +136,21 @@ import Nav from "../components/Nav.astro";
     <section id="palestrantes">
       <div class="mx-auto max-w-7xl px-6 lg:px-8 py-14">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <p class="relative text-sm leading-6 text-primary-700 font-bold">
-            Palestrantes
-          </p>
-          <h2
-            class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          <SectionHeader
+            headline="Palestrantes"
+            title="Mentes ágeis compartilhando insights"
+            subtititle="Conectando pessoas, impulsionando projetos: A agilidade com força total."
           >
-            Mentes ágeis compartilhando insights
-          </h2>
-          <h3 class="text-base mb-6">
-            Conectando pessoas, impulsionando projetos: A agilidade com força
-            total.
-          </h3>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Este ano estamos trazendo um elenco fantástico de palestrantes para
-            nosso evento! Se você é apaixonado por tecnologia e inovação, não
-            perca a oportunidade de aprender com especialistas.
-          </p>
-          <p class="text-lg leading-8 text-gray-600">
-            Ainda temos algumas surpresas a serem anunciadas, então acompanhe
-            nossos canais para ficar por dentro de todas as atualizações..
-          </p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Este ano estamos trazendo um elenco fantástico de palestrantes para
+              nosso evento! Se você é apaixonado por tecnologia e inovação, não
+              perca a oportunidade de aprender com especialistas.
+            </p>
+            <p class="text-lg leading-8 text-gray-600">
+              Ainda temos algumas surpresas a serem anunciadas, então acompanhe
+              nossos canais para ficar por dentro de todas as atualizações..
+            </p>
+          </SectionHeader>
         </div>
       </div>
 
@@ -319,79 +302,69 @@ import Nav from "../components/Nav.astro";
     <section id="programacao">
       <div class="bg-white py-24">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mb-10">
-            <p class="relative text-sm leading-6 text-primary-700 font-bold">
-              Programação
-            </p>
-            <h2
-              class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-            >
-              Uma jornada repleta de conhecimento e práticas ágeis
-            </h2>
-            <h3 class="text-base mb-6">
-              Conheça o roteiro emocionante que irá impulsionar sua
-              transformação ágil
-            </h3>
-          </div>
-          <div>
-            <style>
-              .contents input {
-                display: none;
-              }
+          <SectionHeader
+            headline="Programação"
+            title="Uma jornada repleta de conhecimento e práticas ágeis"
+            subtitle="Conheça o roteiro emocionante que irá impulsionar sua transformação ágil" 
+          />
+          <div class="pb-10"/>
+          <style>
+            .contents input {
+              display: none;
+            }
 
-              .tab {
-                display: none;
-              }
+            .tab {
+              display: none;
+            }
 
-              #tab1:checked ~ .content1,
-              #tab2:checked ~ .content2,
-              #tab3:checked ~ .content3 {
-                display: block;
-              }
+            #tab1:checked ~ .content1,
+            #tab2:checked ~ .content2,
+            #tab3:checked ~ .content3 {
+              display: block;
+            }
 
-              .tabs-root:has(.contents #tab1:checked) nav label:nth-of-type(1),
-              .tabs-root:has(.contents #tab2:checked) nav label:nth-of-type(2),
-              .tabs-root:has(.contents #tab3:checked) nav label:nth-of-type(3) {
-                color: #68c4a9;
-                font-weight: 700;
-                border-color: currentColor;
-              }
-            </style>
-            <div class="sm:block tabs-root">
-              <div class="border-b border-gray-200">
-                <nav class="-mb-px flex justify-center" aria-label="Tabs">
-                  <label
-                    for="tab1"
-                    class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
-                    >Auditório principal</label
-                  >
+            .tabs-root:has(.contents #tab1:checked) nav label:nth-of-type(1),
+            .tabs-root:has(.contents #tab2:checked) nav label:nth-of-type(2),
+            .tabs-root:has(.contents #tab3:checked) nav label:nth-of-type(3) {
+              color: #68c4a9;
+              font-weight: 700;
+              border-color: currentColor;
+            }
+          </style>
+          <div class="sm:block tabs-root">
+            <div class="border-b border-gray-200">
+              <nav class="-mb-px flex justify-center" aria-label="Tabs">
+                <label
+                  for="tab1"
+                  class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                  >Auditório principal</label
+                >
 
-                  <label
-                    for="tab2"
-                    class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
-                    >Coworking</label
-                  >
+                <label
+                  for="tab2"
+                  class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                  >Coworking</label
+                >
 
-                  <label
-                    for="tab3"
-                    class="font-bold border-transparent text-gray-500 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
-                    aria-current="page">Espaço Móvile</label
-                  >
-                </nav>
+                <label
+                  for="tab3"
+                  class="font-bold border-transparent text-gray-500 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                  aria-current="page">Espaço Móvile</label
+                >
+              </nav>
+            </div>
+            <div class="contents">
+              <input type="radio" name="tabs" id="tab1" checked="checked" />
+              <div class="tab content1 px-2 sm:px-10 lg:px-40 md:px-20">
+                <p>Sera anunciado em breve.</p>
               </div>
-              <div class="contents">
-                <input type="radio" name="tabs" id="tab1" checked="checked" />
-                <div class="tab content1 px-2 sm:px-10 lg:px-40 md:px-20">
-                  <p>Sera anunciado em breve.</p>
-                </div>
-                <input type="radio" name="tabs" id="tab2" />
-                <div class="tab content2 px-2 sm:px-10 lg:px-40 md:px-20">
-                  <p>Sera anunciado em breve.</p>
-                </div>
-                <input type="radio" name="tabs" id="tab3" />
-                <div class="tab content3 px-2 sm:px-10 lg:px-40 md:px-20">
-                  <p>Sera anunciado em breve.</p>
-                </div>
+              <input type="radio" name="tabs" id="tab2" />
+              <div class="tab content2 px-2 sm:px-10 lg:px-40 md:px-20">
+                <p>Sera anunciado em breve.</p>
+              </div>
+              <input type="radio" name="tabs" id="tab3" />
+              <div class="tab content3 px-2 sm:px-10 lg:px-40 md:px-20">
+                <p>Sera anunciado em breve.</p>
               </div>
             </div>
           </div>
