@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Logo from "../components/images/logo.astro";
+import CtaBanner from "../components/cta-banner.astro";
 import palestrantes from "../dados/palestrantes.json";
 import patrocinadores from "../dados/patrocinadores.json";
 import { Picture } from "@astrojs/image/components";
 import SectionPatrocinio from "../components/SectionPatrocinio.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <script>
@@ -24,189 +26,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
 </script>
 
 <Layout title="Interagil 2023 - 27/05">
-  <nav class="bg-white shadow fixed z-50 w-full">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 justify-between">
-        <div
-          class="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
-        >
-          <div class="inset-y-0 left-0 flex items-center md:hidden">
-            <!-- Mobile menu button -->
-            <button
-              type="button"
-              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-700"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-              id="mobile-menu-button"
-            >
-              <span class="sr-only">Open main menu</span>
-              <!--
-            Icon when menu is closed.
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-              <svg
-                class="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-              </svg>
-              <!--
-            Icon when menu is open.
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-              <svg
-                class="hidden h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
-          <div
-            class="flex flex-shrink-0 items-center justify-center flex-1 md:flex-none"
-          >
-            <a href="#">
-              <Logo class="block h-32 w-auto" alt="Interagil" />
-            </a>
-          </div>
-          <div class="hidden md:ml-6 md:flex md:justify-around flex-1">
-            <!-- Current: "border-primary-700 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-            <a
-              href="#evento"
-              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Evento</a
-            >
-            <a
-              href="#palestrantes"
-              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Palestrantes</a
-            >
-            <a
-              href="#programacao"
-              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Programação</a
-            >
-            <a
-              href="#patrocinadores"
-              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Patrocinadores</a
-            >
-            <a
-              href="#local"
-              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Local</a
-            >
-            <a
-              href="#local"
-              class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >Contato</a
-            >
-          </div>
-          <div class="flex ml-auto">
-            <a
-              href="#"
-              target="_blank"
-              class="self-center rounded-md bg-primary-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-              >Ingressos
-              <svg
-                class="inline"
-                width="1.5em"
-                height="1.5em"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M22 6.5C22 5.39543 21.1046 4.5 20 4.5H18C17.7391 4.51101 17.5151 4.68921 17.4457 4.941C17.2419 5.78442 16.487 6.37857 15.6194 6.37855C14.7517 6.37854 13.9968 5.78435 13.793 4.94093C13.7237 4.68918 13.4997 4.511 13.2388 4.5H4C2.89543 4.5 2 5.39543 2 6.5V17.5C2 18.6046 2.89543 19.5 4 19.5H13.2388C13.4997 19.489 13.7237 19.3108 13.793 19.0591C13.9968 18.2157 14.7517 17.6215 15.6194 17.6215C16.487 17.6214 17.2419 18.2156 17.4457 19.059C17.5151 19.3108 17.7391 19.489 18 19.5H20C21.1046 19.5 22 18.6046 22 17.5V6.5Z"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path
-                  d="M15.5 15.25V14.75"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path
-                  d="M15.5 12.25V11.75"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <path
-                  d="M15.5 9.25V8.75"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="hidden md:hidden" id="mobile-menu">
-      <div class="space-y-1 pt-2 pb-4">
-        <!-- Current: "bg-primary-50 border-primary-700 text-primary-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-        <a
-          href="#"
-          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >Interagil</a
-        >
-        <a
-          href="#evento"
-          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >Evento</a
-        >
-        <a
-          href="#palestrantes"
-          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >Palestrantes</a
-        >
-        <a
-          href="#programacao"
-          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >Programação</a
-        >
-        <a
-          href="#patrocinadores"
-          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >Patrocinadores</a
-        >
-        <a
-          href="#local"
-          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >Local</a
-        >
-        <a
-          href="#contato"
-          class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-          >Contato</a
-        >
-      </div>
-    </div>
-  </nav>
+  <Nav />
 
   <main class="pb-20 bg-white">
     <section id="evento">
@@ -219,12 +39,12 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
                   class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"
                 >
                   <span class="text-primary-400">Vivencie a</span>
-                  <span>transformacao agil no interior</span>
-                  <time datetime="2023-05-27">27/05</time>
+                  <span>transformação ágil no interior</span>
                 </h1>
                 <h2 class="text-center"></h2>
                 <p class="mt-6 text-lg leading-8 text-gray-600">
-                  Conheça a força da agilidade no interior de São Paulo e
+                  No dia <time datetime="2023-05-27">27/05</time>, venha
+                  conhecer a força da agilidade no interior de São Paulo e
                   participe do Interágil!
                 </p>
                 <div
@@ -260,7 +80,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
           <div class="mx-auto lg:mx-0 lg:max-w-none">
             <div class="flex-shrink-0 mr-8 lg:hidden"></div>
             <div>
-              <p class="text-base font-semibold leading-7 text-primary-700">
+              <p class="text-base font-semibold leading-7 text-primary-400">
                 O evento
               </p>
               <h1
@@ -268,11 +88,11 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
               >
                 O Interágil está de volta!
               </h1>
-              <h2 class="text-base mb-6">
+              <h2 class="text-xl mb-6 text-gray-600">
                 Conectando pessoas, impulsionando projetos: A agilidade com
                 força total.
               </h2>
-              <div class="md:columns-2 text-justify gap-20">
+              <div class="md:columns-2 text-justify gap-20 text-gray-600">
                 <p class="mb-4">
                   O InterÁgil está de volta em 2023 para sua aguardada 5ª
                   edição! Após uma breve pausa, retomamos com toda a energia
@@ -285,7 +105,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
                   reunirmos novamente, renovados e prontos para avançar.
                 </p>
                 <p class="mb-4">
-                  Neste ano, continuaremos no inspirador ONOVOLAB, o local que
+                  Neste ano, continuaremos no inspirador <span class="font-semibold">ONOVOLAB</span>, o local que
                   incentiva a inovação em nossa região.
                 </p>
                 <p class="mb-4">
@@ -316,28 +136,12 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
       </div>
     </section>
     <section id="ingressos-cta">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div
-          class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24 flex-col md:flex-row"
-        >
-          <div>
-            <p class="text-lg font-bold mb-2">
-              O primeiro lote já está disponível!
-            </p>
-            <p class="text-lg">
-              Garanta seu lugar e faça parte da transformação ágil no interior!
-            </p>
-          </div>
-          <div class="flex justify-center items-center flex-1">
-            <a
-              href="#"
-              target="_blank"
-              class="whitespace-nowrap rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-              >Adquirir ingressos</a
-            >
-          </div>
-        </div>
-      </div>
+      <CtaBanner 
+        title="O primeiro lote já está disponível!"
+        text="Garanta seu lugar e faça parte da transformação ágil no interior!"
+        href=""
+        cta="Adquirir ingressos"
+      />
     </section>
 
     <section id="palestrantes">
@@ -365,6 +169,17 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
             nossos canais para ficar por dentro de todas as atualizações..
           </p>
         </div>
+      </div>
+
+      <CtaBanner 
+        title="Seja um palestrante no InterÁgil!"
+        text="Faça parte do evento que está impulsionando a agilidade na região."
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd2r8OoI9TdaazmLPbcZ4qkS_pSJPziVsMAws3fijBB_afPww/viewform"
+        cta="Quero ser um palestrante"
+      />
+
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 py-14">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
         <ul
           role="list"
           class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4"
@@ -634,7 +449,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
             </div>
             <div class="flex justify-center items-center flex-1">
               <a
-                href="#"
+                href="/patrocinios/interagil-presskit.pdf"
                 target="_blank"
                 class="whitespace-nowrap rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                 >Quero ser um patrocinador</a
@@ -720,16 +535,10 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
       </p>
       <div class="flex justify-center gap-4">
         <a
-          href="#"
+          href="mailto:contato.interagil@gmail.com"
           target="_blank"
           class="rounded-md border-2 border-grey-900 px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
           >Enviar email</a
-        >
-        <a
-          href="#"
-          target="_blank"
-          class="rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-          >Mensagem WhatsApp</a
         >
       </div>
     </section>
@@ -740,8 +549,7 @@ import SectionPatrocinio from "../components/SectionPatrocinio.astro";
     >
       <span>© 2023 Interágil. Todos os direitos reservados</span>
       <div>
-        <a href="#">Política de Privacidade</a>
-        <a class="ml-4" href="#">Cookies</a>
+        <a href="/codigo-de-conduta">Código de conduta</a>
       </div>
     </div>
   </footer>
