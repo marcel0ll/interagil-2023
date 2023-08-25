@@ -13,7 +13,7 @@ import image from "@astrojs/image";
 export default defineConfig({
   sitemap: true,
   site: "https://www.interagil.com/",
-  base: "/interagil-2023/",
+  base: "/interagil-2023",
   outDir: "build",
   output: "static",
   integrations: [mdx(), tailwind(), image()]

@@ -59,39 +59,39 @@ import Logo from "../components/images/logo.astro";
           <div
             class="flex flex-shrink-0 items-center justify-center flex-1 md:flex-none"
           >
-            <a href="/#">
+            <a href=`${import.meta.env.BASE_URL}`>
               <Logo class="block h-32 w-auto" alt="Interagil" />
             </a>
           </div>
           <div class="hidden md:ml-6 md:flex md:justify-around flex-1">
             <!-- Current: "border-primary-700 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
             <a
-              href="/#evento"
+              href=`${import.meta.env.BASE_URL}#evento`
               class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >Evento</a
             >
             <a
-              href="/#palestrantes"
+              href=`${import.meta.env.BASE_URL}#palestrantes`
               class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >Palestrantes</a
             >
             <a
-              href="/#programacao"
+              href=`${import.meta.env.BASE_URL}#programacao`
               class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >Programação</a
             >
             <a
-              href="/#patrocinadores"
+              href=`${import.meta.env.BASE_URL}#patrocinadores`
               class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >Patrocinadores</a
             >
             <a
-              href="/#local"
+              href=`${import.meta.env.BASE_URL}#local`
               class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >Local</a
             >
             <a
-              href="/#local"
+              href=`${import.meta.env.BASE_URL}#contato`
               class="font-semibold inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >Contato</a
             >
@@ -148,22 +148,22 @@ import Logo from "../components/images/logo.astro";
       <div class="space-y-1 pt-2 pb-4">
         <!-- Current: "bg-primary-50 border-primary-700 text-primary-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
         <a
-          href="#"
+          href=`${import.meta.env.BASE_URL}`
           class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
           >Interagil</a
         >
         <a
-          href="#evento"
+          href=`${import.meta.env.BASE_URL}#evento`
           class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
           >Evento</a
         >
         <a
-          href="#palestrantes"
+          href=`${import.meta.env.BASE_URL}#palestrantes`
           class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
           >Palestrantes</a
         >
         <a
-          href="#programacao"
+          href=`${import.meta.env.BASE_URL}#programacao`
           class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
           >Programação</a
         >
@@ -173,12 +173,12 @@ import Logo from "../components/images/logo.astro";
           >Patrocinadores</a
         >
         <a
-          href="#local"
+          href=`${import.meta.env.BASE_URL}#local`
           class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
           >Local</a
         >
         <a
-          href="#contato"
+          href=`${import.meta.env.BASE_URL}#contato`
           class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
           >Contato</a
         >
