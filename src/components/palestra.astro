@@ -9,12 +9,13 @@ const { title, speaker, start, end } = Astro.props;
   }
 </style>
 
-<div class="py-6 palestra">
+<div class="py-4 palestra">
   {speaker && <h3 class="font-bold text-md ">{speaker}</h3>}
   <h2 class="font-bold text-lg">{title}</h2>
-  <div class="pt-2 pb-6 text-gray-700">
-    <slot />
-  </div>
+  {Astro.slots.has('default') && <div class="pt-2 pb-6 text-gray-700">
+      <slot />
+    </div>
+  }
   <div class="flex items-center text-gray-500">
     <Clock class="mr-2" />
     {start} - {end}
