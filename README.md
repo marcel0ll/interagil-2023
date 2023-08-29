@@ -1,6 +1,6 @@
 # Site Interagil 2023
 
-O site... pro Interagil... em 2023!
+O site pro Interagil em 2023!
 
 ## Desenvolvendo
 
