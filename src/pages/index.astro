@@ -40,22 +40,25 @@ import Nav from "../components/Nav.astro";
                 <h1
                   class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"
                 >
-                  <span class="text-primary-400">Vivencie a</span>
+                  <span class="text-primary-400">Interágil 2023</span>
                   <span>transformação ágil no interior</span>
                 </h1>
                 <h2 class="text-center"></h2>
                 <p class="mt-6 text-lg leading-8 text-gray-600">
-                  No dia <time datetime="2023-11-11">11/11</time>, venha
-                  conhecer a força da agilidade no interior de São Paulo e
-                  participe do Interágil!
+                  No dia <time datetime="2023-11-11">11 de novembro</time>, convidamos você a mergulhar no mundo da agilidade como nunca antes! O Interágil está de volta a São Carlos, no interior de São Paulo, e você terá uma oportunidade incrível para explorar as novidades da metodologia ágil em nossas palestras e fortalecer seu network nos workshops.
                 </p>
+                <!-- <p> -->
+                <!--   Local: ONOVOLAB - Sao Carlos -->
+                <!--   Data: 11 de Novembro de 2023 -->
+                <!--   Horário: Das [Horário de Início] às [Horário de Termino] -->
+                <!-- </p> -->
                 <div
                   class="mt-10 flex items-center gap-x-6 justify-center sm:justify-start"
                 >
                   <a
                     href="https://www.sympla.com.br/evento/interagil-2023/2136272?_gl=1*gpe6jc*_ga*MTc2NDA3NTQxLjE2OTI5OTQxNjc.*_ga_KXH10SQTZF*MTY5Mjk5NDE2Ny4xLjEuMTY5Mjk5NTEwNC4wLjAuMA"
                     target="_blank"
-                    class="rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                    class="self-center rounded-md bg-primary-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
                     >Reserve seu ingresso</a
                   >
                 </div>
@@ -149,18 +152,44 @@ import Nav from "../components/Nav.astro";
             </p>
             <p class="text-lg leading-8 text-gray-600">
               Ainda temos algumas surpresas a serem anunciadas, então acompanhe
-              nossos canais para ficar por dentro de todas as atualizações..
+              nossos canais para ficar por dentro de todas as atualizações.
+            </p>
+
+            <p class="mt-6 text-2xl">O Que Esperar do Interágil:</p>
+
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              🚀 Palestras Inspiradoras: Junte-se a especialistas e profissionais renomados
+              que compartilharão insights valiosos sobre como a agilidade está
+              transformando empresas e impulsionando resultados.
+            </p>
+
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              🤝 Networking Enriquecedor: Conheça outros entusiastas da agilidade, amplie
+              sua rede de contatos e estabeleça conexões que podem impulsionar
+              sua carreira e seus projetos.
+            </p>
+
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              🙌 Experiências Práticas: Participe de workshops interativos que o ajudarão a
+              vivenciar na prática os conceitos fundamentais da agilidade,
+              proporcionando-lhe as habilidades necessárias para aplicá-los em
+              qualquer contexto.
+            </p>
+
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              🎯 Exploração de Casos de Sucesso: Descubra como empresas locais estão
+              implementando abordagens ágeis para superar desafios e alcançar um
+              crescimento excepcional.
+            </p>
+
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              🎉 Celebração e Diversão: Não é apenas um evento, é uma experiência! Desfrute
+              de momentos divertidos e inspiradores enquanto aprende e
+              compartilha conhecimento.
             </p>
           </SectionHeader>
         </div>
       </div>
-
-      <CtaBanner 
-        title="Seja um palestrante no InterÁgil!"
-        text="Faça parte do evento que está impulsionando a agilidade na região."
-        href="https://docs.google.com/forms/d/e/1FAIpQLSd2r8OoI9TdaazmLPbcZ4qkS_pSJPziVsMAws3fijBB_afPww/viewform"
-        cta="Quero ser um palestrante"
-      />
 
       <div class="mx-auto max-w-7xl px-6 lg:px-8 py-14">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
@@ -299,6 +328,13 @@ import Nav from "../components/Nav.astro";
         </ul>
       </div>
     </section>
+
+    <CtaBanner 
+      title="Seja um palestrante no InterÁgil!"
+      text="Faça parte do evento que está impulsionando a agilidade na região."
+      href="https://docs.google.com/forms/d/e/1FAIpQLSd2r8OoI9TdaazmLPbcZ4qkS_pSJPziVsMAws3fijBB_afPww/viewform"
+      cta="Quero ser um palestrante"
+    />
 
     <section id="programacao">
       <div class="bg-white py-24">
@@ -441,27 +477,6 @@ import Nav from "../components/Nav.astro";
             patrocinadores={patrocinadores.bronze}
             titulo="Bronze"
           />
-          <div
-            class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24 flex-col md:flex-row"
-          >
-            <div>
-              <p class="text-lg font-bold mb-2">
-                Torne-se um Patrocinador do Interágil
-              </p>
-              <p class="text-lg">
-                Faça parte do evento que está impulsionando a agilidade na
-                região e amplie sua visibilidade agente da transformação ágil!
-              </p>
-            </div>
-            <div class="flex justify-center items-center flex-1">
-              <a
-                href=`${import.meta.env.BASE_URL}patrocinios/interagil-presskit.pdf`
-                target="_blank"
-                class="whitespace-nowrap rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-                >Quero ser um patrocinador</a
-              >
-            </div>
-          </div>
           <SectionPatrocinio
             patrocinadores={patrocinadores.apoio}
             titulo="Apoio"
@@ -470,7 +485,12 @@ import Nav from "../components/Nav.astro";
         </div>
       </div>
     </section>
-
+    <CtaBanner 
+      title="Torne-se um Patrocinador do Interágil"
+      text="Faça parte do evento que está impulsionando a agilidade na região e amplie sua visibilidade agente da transformação ágil!"
+      href=`${import.meta.env.BASE_URL}patrocinios/interagil-presskit.pdf`
+      cta="Quero ser um patrocinador"
+    />
     <section class="googleMaps bg-white" id="local">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">

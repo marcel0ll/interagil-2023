@@ -13,7 +13,7 @@ const { href, title, text, cta } = Astro.props;
   <div
     class="my-10 bg-gray-50 py-12 px-16 rounded-lg flex gap-24 flex-col md:flex-row"
   >
-    <div>
+    <div class="flex-auto">
       <p class="text-3xl font-bold mb-4">
         {title}
       </p>
@@ -21,11 +21,11 @@ const { href, title, text, cta } = Astro.props;
         {text}
       </p>
     </div>
-    <div class="flex justify-center items-center flex-1 md:justify-end">
+    <div class="flex justify-center items-center flex-none md:justify-end">
       <a
         href={href}
         target="_blank"
-        class="whitespace-nowrap rounded-md bg-slate-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+        class="self-center rounded-md bg-primary-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
         >{cta}</a
       >
     </div>
