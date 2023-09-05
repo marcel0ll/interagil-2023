@@ -1,23 +1,23 @@
 [
   {
-    "image": "/palestrantes/empty.png",
-    "name": "A ser anunciado",
-    "company": "Empresa",
-    "about": "",
-    "twitter": "#",
-    "linkedin": "#",
-    "github": "#",
-    "site": "#"
+    "image": "/palestrantes/cecilia.jpg",
+    "name": "Líder de Global Productivity",
+    "company": "Nubank",
+    "about": "Ceci é líder de Global Productivity no Nubank e organizadora da @agilebrazil. Ela já foi desenvolvedora de software, instrutora, gestora de engenharia, chapter lead de agilistas e é comumente encontrada pelos corredores da comunidade ágil e/ou tomando uma tacinha despretenciosa de vinho.",
+    "twitter": "",
+    "linkedin": "",
+    "github": "",
+    "site": ""
   },
   {
-    "image": "/palestrantes/empty.png",
-    "name": "A ser anunciado",
-    "company": "Empresa",
-    "about": "",
-    "twitter": "#",
-    "linkedin": "#",
-    "github": "#",
-    "site": "#"
+    "image": "/palestrantes/lula.png",
+    "name": "Head of Pedagogy & Student Experience",
+    "company": "Escola 42 São Paulo",
+    "about": "Apaixonado por tecnologia, educação e gestão, Lula é atuante em discussões abertas, palestrante e voluntário em grandes eventos de tecnologia e agilidade. Atuou durante anos como consultor e professor em organizações no Brasil e no mundo disseminando melhores formas de gestão do trabalho criativo. Hoje é o Head de Pedagogia da 42 São Paulo, escola de engenharia de software parte de uma rede global com campus em mais de 25 países.",
+    "twitter": "",
+    "linkedin": "",
+    "github": "",
+    "site": ""
   },
   {
     "image": "/palestrantes/empty.png",
