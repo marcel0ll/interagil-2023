@@ -13,9 +13,59 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href=`${import.meta.env.BASE_URL}favicon.svg` />
 		<title>{title}</title>
-    <link rel="canonical" href="http://www.interagil.com/" /> 
+    <link rel="canonical" href="http://interagil.com/" /> 
+
+    <meta name="description" content="Interágil 2023 transformação ágil no interior, o maior evento de agilidade de São Carlos!">
+
+    <meta property="og:title" content="Interágil 2023">
+    <meta property="og:description" content="Interágil 2023 transformação ágil no interior, o maior evento de agilidade de São Carlos!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://interagil.com/images/logo_full.png">
+    <meta property="og:url" content="https://interagil.com/">
+    <meta property="og:site_name" content="Interágil 2023">
 
     <script defer data-domain="interagil.com" src="https://plausible.io/js/script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Interágil 2023",
+        "url":"https://interagil.com", 
+        "startDate": "2023-11-11T07:30-03:00",
+        "endDate": "2023-11-11T18:30-03:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Onovolab",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Aquidaban, 1 - Centro",
+            "addressLocality": "São Carlos",
+            "postalCode": "13560-120",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+          }
+        },
+        "image": [
+          "https://interagil.com/images/logo_full.png"
+         ],
+        "description": "Interágil 2023 transformação ágil no interior, o maior evento de agilidade de São Carlos!",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.sympla.com.br/evento/interagil-2023/2136272",
+          "price": "90.00",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2023-09-05T00:00:00-03:00"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Interágil",
+          "url": "https://interagil.com"
+        }
+      }
+    </script>
 	</head>
 	<body>
 		<slot />
