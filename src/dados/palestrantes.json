@@ -20,23 +20,38 @@
     "site": ""
   },
   {
-    "image": "/palestrantes/empty.png",
-    "name": "A ser anunciado",
-    "company": "Empresa",
-    "about": "",
-    "twitter": "#",
-    "linkedin": "#",
-    "github": "#",
-    "site": "#"
+    "image": "/palestrantes/cleiton.jpeg",
+    "name": "Cleiton Martins borges",
+    "company": "Nstech",
+    "about": "Ex-Catho, Ex-Dafiti, Ex-ParanaBanco e um Nstecher. Tenho como propósito ajudar as empresas a se tornarem adaptáveis atráves da tecnologia e agilidade, facilitando a mudança de cultura organizacional necessária para a geração de valor. Experiência com transformação nos setores de varejo, educação, cultura, recursos humanos e financeiro. Liderança de equipes globais e multifuncionais, com resultados alcançados através dos pilares de alinhamento estratégico, liderança, desenvolvimento de pessoas e modelo operacional. A transformação é a chave para lidar com o nosso cenário atual e futuro, sempre começando com o foco no cliente e a empatia.",
+    "linkedin": "https://www.linkedin.com/in/cleiton-borges?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
-    "image": "/palestrantes/empty.png",
-    "name": "A ser anunciado",
-    "company": "Empresa",
-    "about": "",
-    "twitter": "#",
-    "linkedin": "#",
-    "github": "#",
-    "site": "#"
+    "image": "/palestrantes/henrique.jpg",
+    "name": "Henrique Gonçalves",
+    "company": "Banco BV",
+    "about": "Agilista, prudentino, colecionador de miniaturas e para os íntimos \"Meteoro da Agilidade\". Trabalha atualmente no Banco BV, garantindo os esforços de cada time respectivamente alinhados com as estratégias da organização e buscando mecanismos para alavancar as entregas de forma colaborativa e sustentável. Tem uma experiência de 12 anos em áreas de Tecnologia e Inovação, atuando como consultor em empresas como Bradesco Cartões, Banco Pan e Itaú. Nos últimos 7 anos tem trabalhado com Agilidade, focado na melhoria contínua e resultados de negócio. É voluntário, organizador e/ou participante em diversas eventos e comunidade de agilidade (Agile Trends, Agile Brazil, Scrum Gathering Rio e TDC)",
+    "linkedin": "https://www.linkedin.com/in/henriquefernandesgoncalves/"
+  },
+  {
+    "image": "/palestrantes/paulo.jpeg",
+    "name": "Paulo Cassim",
+    "company": "Nubank",
+    "about": "Com mais de 12 anos em áreas de Tecnologia e Inovação, atualmente é agente de mudanças no Nubank, colaborando para construção de equipes e processos de alta performance. Acredita em modelos agnósticos de métodos na busca pela agilidade e com isso aplica de forma evolucionária práticas e conceitos de acordo com a necessidade e maturidade do contexto. Em suas horas livres gosta de cozinhar, ler, jogar videogame e ficar com a família. É voluntário, organizador e/ou participante em diversos eventos de agilidade (Agile Trends, Agile Brazil e TDC) e comunidades de startups (ZeroOnze, Cotton Valley, etc).",
+    "linkedin": "https://www.linkedin.com/in/pccassin/"
+  },
+  {
+    "image": "/palestrantes/ana.jpeg",
+    "name": "Ana Paula dos Reis Lima",
+    "company": "TakeBlip",
+    "about": "Mineira em terras paulistas. Atualmente é Business Agile, apaixonada por pessoas e pelas relações entre elas. Atua com agilidade há mais de 5 anos e se especializou em agilidade organizacional, ou seja, em como fazer com que uma empresa se adapte às necessidades do mercado. Recentemente, se tornou Embaixadora do Programa Women Techmakers da Google.",
+    "linkedin": "https://www.linkedin.com/in/ana-paula-reis-lima/"
+  },
+  {
+    "image": "/palestrantes/tiago.jpeg",
+    "name": "Tiago Aparecido dos Santos Tâmega",
+    "company": "Tokenlab",
+    "about": "Formado em Análise de Sistemas e com pós em gestão de pessoas, atua com agilidade há mais de 10 anos, porém há 7 como agilista de fato. Já foi desenvolvedor, QA, Scrum Master, Agile Coach e há 2 anos é responsável pelas áreas de Marketing e Vendas na Tokenlab, levando a agilidade para áreas pouco exploradas.",
+    "linkedin": "https://www.linkedin.com/in/tiago-t%C3%A2mega-57227697/"
   }
 ]
