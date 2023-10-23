@@ -1,23 +1,19 @@
 [
   {
     "image": "/palestrantes/cecilia.jpg",
-    "name": "Líder de Global Productivity",
+    "name": "Ceci Fernandes",
+    "_role": "Líder de Global Productivity",
     "company": "Nubank",
     "about": "Ceci é líder de Global Productivity no Nubank e organizadora da @agilebrazil. Ela já foi desenvolvedora de software, instrutora, gestora de engenharia, chapter lead de agilistas e é comumente encontrada pelos corredores da comunidade ágil e/ou tomando uma tacinha despretenciosa de vinho.",
-    "twitter": "",
-    "linkedin": "",
-    "github": "",
-    "site": ""
+    "linkedin": "https://www.linkedin.com/in/cecifernandes/"
   },
   {
     "image": "/palestrantes/lula.png",
-    "name": "Head of Pedagogy & Student Experience",
+    "name": "Luiz \"Lula\" Rodrigues",
+    "_role": "Head of Pedagogy & Student Experience",
     "company": "Escola 42 São Paulo",
     "about": "Apaixonado por tecnologia, educação e gestão, Lula é atuante em discussões abertas, palestrante e voluntário em grandes eventos de tecnologia e agilidade. Atuou durante anos como consultor e professor em organizações no Brasil e no mundo disseminando melhores formas de gestão do trabalho criativo. Hoje é o Head de Pedagogia da 42 São Paulo, escola de engenharia de software parte de uma rede global com campus em mais de 25 países.",
-    "twitter": "",
-    "linkedin": "",
-    "github": "",
-    "site": ""
+    "linkedin": "https://www.linkedin.com/in/lula42/"
   },
   {
     "image": "/palestrantes/cleiton.jpeg",
@@ -35,7 +31,7 @@
   },
   {
     "image": "/palestrantes/paulo.jpeg",
-    "name": "Paulo Cassim",
+    "name": "Paulo Cassin",
     "company": "Nubank",
     "about": "Com mais de 12 anos em áreas de Tecnologia e Inovação, atualmente é agente de mudanças no Nubank, colaborando para construção de equipes e processos de alta performance. Acredita em modelos agnósticos de métodos na busca pela agilidade e com isso aplica de forma evolucionária práticas e conceitos de acordo com a necessidade e maturidade do contexto. Em suas horas livres gosta de cozinhar, ler, jogar videogame e ficar com a família. É voluntário, organizador e/ou participante em diversos eventos de agilidade (Agile Trends, Agile Brazil e TDC) e comunidades de startups (ZeroOnze, Cotton Valley, etc).",
     "linkedin": "https://www.linkedin.com/in/pccassin/"
