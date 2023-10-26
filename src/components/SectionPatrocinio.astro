@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 
 const { patrocinadores, titulo, imageClass } = Astro.props;
 ---
@@ -20,7 +20,8 @@ const { patrocinadores, titulo, imageClass } = Astro.props;
                 <Picture
                   class={`mx-auto object-contain ${imageClass || patrocinador.class || 'h-24'} `}
                   widths={[100, 200, 400, 800]}
-                  aspectRatio={patrocinador.aspectRatio || "1:1"}
+                  width={patrocinador.width}
+                  height={patrocinador.height}
                   src={patrocinador.image}
                   alt={patrocinador.name}
                 />

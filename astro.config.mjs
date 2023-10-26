@@ -7,14 +7,14 @@ import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-import image from "@astrojs/image";
-
-// https://astro.build/config
 export default defineConfig({
   sitemap: true,
   site: "https://www.interagil.com/",
   base: "/",
   outDir: "build",
   output: "static",
-  integrations: [mdx(), tailwind(), image()]
+  integrations: [mdx(), tailwind()],
+  server: {
+    port: 3000
+  }
 });

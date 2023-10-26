@@ -6,7 +6,7 @@ import SectionHeader from "../components/section-header.astro";
 import Palestra from "../components/palestra.astro";
 import palestrantes from "../dados/palestrantes.json";
 import patrocinadores from "../dados/patrocinadores.json";
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 import SectionPatrocinio from "../components/SectionPatrocinio.astro";
 import Nav from "../components/Nav.astro";
 ---
@@ -75,7 +75,8 @@ import Nav from "../components/Nav.astro";
           <Picture
             class="aspect-[3/2] object-cover w-full lg:aspect-auto lg:h-full lg:w-full"
             widths={[100, 200, 400, 800, 1280]}
-            aspectRatio="1:1"
+            width="1280"
+            height="1280"
             sizes={""}
             src="/images/background.png"
             alt="pessoas em anfiteatro ouvindo uma palestra"
@@ -178,7 +179,8 @@ import Nav from "../components/Nav.astro";
                       class="w-full aspect-[14/15]"
                       widths={[346, 600]}
                       sizes="(max-width: 639px) 600px, 346px"
-                      aspectRatio="14:15"
+                      width="600"
+                      height="686"
                       src={palestrante.image}
                       alt={palestrante.name}
                     />
