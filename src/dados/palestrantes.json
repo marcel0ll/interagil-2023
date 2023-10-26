@@ -56,5 +56,19 @@
     "company": "K21",
     "about": "Agile Expert, Trainer e Partner na K21. Eng. de Computação e Esp. em Eng. de Sistemas, atuando como Agile Coach na K21, atuou com Scrum Master na Digix e como docente no ensino superior na UNIDERP e Anhaguera Educacional e na Pós-Graduado na UCDB, experiência em facilitação. Estudante e praticante das melhores práticas Agile.",
     "linkedin": "https://www.linkedin.com/in/samuelmbc/"
+  },
+  {
+    "image": "/palestrantes/danilo.jpeg",
+    "name": "Danilo Morais",
+    "company": "Radar",
+    "about": "Consultor especialista em Bussiness agility e Product operation com 8+ anos de experiência em gestão de portfólio, product discovery e consultoria executiva em empresas de alto crescimento, incluindo PagSeguro, Invillia, DiviHub, Cetelem, B2W (AME), GFG (Dafiti), Elopar (Alelo) e Exactaworks. Sempre trabalhando em estreita colaboração com stakeholders em todos os níveis para priorizar recursos, facilitar Lean inceptions, design sprints e impulsionar uma mentalidade orientada a dados por meio de experimentação. Apaixonado por capacitar equipes para resolver problemas complexos com soluções centradas no usuário.",
+    "linkedin": "https://www.linkedin.com/in/danilo-morais/"
+  },
+  {
+    "image": "/palestrantes/deyse.jpeg",
+    "name": "Deyse Sande",
+    "company": "Exactaworks",
+    "about": "Designer organizacional e Agile coach. Mestre em Ciência da Computação e Inovação, agilista e apaixonada por criar conexões entre as pessoas",
+    "linkedin": "https://www.linkedin.com/in/deysianesande/"
   }
 ]

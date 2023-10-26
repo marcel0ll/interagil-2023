@@ -12,10 +12,10 @@ import Nav from "../components/Nav.astro";
 ---
 
 <script>
+  let menu = document.getElementById("mobile-menu");
   let isMobileOpen = false;
   function toggleMobileMenu() {
     isMobileOpen = !isMobileOpen;
-    let menu = document.getElementById("mobile-menu");
     if (isMobileOpen) {
       menu?.classList.remove("hidden");
     } else {
@@ -25,9 +25,11 @@ import Nav from "../components/Nav.astro";
 
   const hamburger = document.getElementById("mobile-menu-button");
   hamburger?.addEventListener("click", toggleMobileMenu);
+
+  menu?.addEventListener("click", toggleMobileMenu);
 </script>
 
-<Layout title="Interagil 2023 - 11/11">
+<Layout title="Interágil 2023 - 11/11">
   <Nav />
 
   <main class="pb-20 bg-white">
@@ -41,7 +43,7 @@ import Nav from "../components/Nav.astro";
                   class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"
                 >
                   <span class="text-primary-400">Interágil 2023</span>
-                  <span>transformação ágil no interior</span>
+                  <span> transformação ágil no interior</span>
                 </h1>
                 <h2 class="text-center"></h2>
                 <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -97,7 +99,7 @@ import Nav from "../components/Nav.astro";
             >
               <div class="md:columns-2 text-justify gap-20 text-gray-600">
                 <p class="mb-4">
-                  O InterÁgil está de volta em 2023 para sua aguardada 5ª
+                  O Interágil está de volta em 2023 para sua aguardada 5ª
                   edição! Após uma breve pausa, retomamos com toda a energia
                   para oferecer o melhor evento de Agilidade da região.
                 </p>
@@ -127,7 +129,7 @@ import Nav from "../components/Nav.astro";
                 <p>
                   Não perca a oportunidade de fazer parte deste renascimento e
                   impulsionar seus projetos com o poder da agilidade. Junte-se a
-                  nós no InterÁgil 2023 e embarque nessa jornada extraordinária!
+                  nós no Interágil 2023 e embarque nessa jornada extraordinária!
                 </p>
               </div>
             </SectionHeader>
@@ -367,7 +369,7 @@ import Nav from "../components/Nav.astro";
                     Chegue cedo, colete seus brindes e conheça novas pessoas.
                   </Palestra>
                   <Palestra
-                    title="Abertura InterÁgil"
+                    title="Abertura Interágil"
                     start="09:00"
                     end="09:15"
                   />
@@ -377,7 +379,7 @@ import Nav from "../components/Nav.astro";
                     end="09:30"
                   />
                   <Palestra
-                    title="Keynote - A ser anunciado"
+                    title="Keynote - TECNOLOGIA, AGILIDADE, PADRÕES E COMUNIDADE, não necessariamente nesta ordem"
                     speaker="Lula"
                     start="09:30"
                     end="10:30"
@@ -413,7 +415,7 @@ import Nav from "../components/Nav.astro";
                     <p>
                       Nesta apresentação questionaremos a Accountability na
                       agilidade, como influenciamos e medimos nossos resultados
-                      e qual o futuro do papel do agilista nas organizações."
+                      e qual o futuro do papel do agilista nas organizações.
                     </p>
                   </Palestra>
                   <Palestra
@@ -441,7 +443,7 @@ import Nav from "../components/Nav.astro";
                     </p>
                   </Palestra>
                   <Palestra title="Almoço" start="12:40" end="14:00" />
-                  <Palestra title="Palestra - A ser anunciado" start="14:10" end="14:30" />
+                  <Palestra title="Kanbanize - Case de Sucesso" start="14:10" end="14:30" />
                   <Palestra
                     title="Agilidade de um projeto começa em como ele é vendido"
                     speaker="Ana Lima e Tiago Tâmega"
@@ -449,8 +451,11 @@ import Nav from "../components/Nav.astro";
                     end="14:50"
 
                   >
-                    <p>
-No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior foco em agilidade em produtos. Porém, como é a agilidade em uma empresa de serviço? Onde começa a agilidade em uma empresa de serviços? A ideia aqui é rascunhar rapidamente sobre as diferenças entre agilidade em uma empresa de produto e uma empresa de serviços e qual a importância de um comercial especialista em agilidade para vender projetos ágeis.
+                    <p class="mb-4">
+No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior foco em agilidade em produtos. Porém, como é a agilidade em uma empresa de serviço? Onde começa a agilidade em uma empresa de serviços? 
+                      </p>
+
+                      <p>A ideia aqui é rascunhar rapidamente sobre as diferenças entre agilidade em uma empresa de produto e uma empresa de serviços e qual a importância de um comercial especialista em agilidade para vender projetos ágeis.
                       </p>
                   </Palestra>
                   <Palestra
@@ -458,7 +463,15 @@ No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior
                     speaker="Samuel Cavalcante"
                     start="15:00"
                     end="15:40"
-                  />
+                  >
+                    <p class="mb-4">
+É bom ter gente para nos salvar no dia a dia da empresa né? Será? Até que ponto isso é bom mesmo?  
+                      </p>
+                    <p>
+                    Vou falar um pouco sobre a cultura do herói e os impactos dela nas empresas, cultura organizacional e do nível de maturidade da empresa. 
+Passando por dicas de como identificar e lidar com toda essa cultura e política.
+                      </p>
+                  </Palestra>
                   <Palestra title="Coffee Break" start="15:50" end="16:20" />
                   <Palestra
                     title="Keynote - Produtividade Sustentável"
@@ -481,6 +494,19 @@ No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior
                     title="Workshop autogestão na Prática"
                     speaker="Deyse e Danilo"
                   >
+
+
+                    <p class="mb-4">
+Recentemente vimos muitos movimentos apontando a grande insatisfação das pessoas com trabalho. O Quiet quiting virou trend, mostrando que a forma como o trabalho acontece nas organizações precisa começar a mudar.
+                      </p>
+
+                    <p class="mb-4">
+No sentido de transformar as organizações, a autogestão pode ser uma poderosa ferramenta para criar mais espaços de trabalho com autonomia e propósito. Se você está buscando entender melhor sobre autogestão, este workshop é perfeito para você! Nele vamos explorar técnicas práticas para criar acordos claros e definir responsabilidades, além de discutir como tomar decisões de forma integrativa e colaborativa. Você poderá ter contato com conhecimentos valiosos e experiências práticas para que você possa aplicar essas técnicas em seu dia a dia, seja no trabalho, em projetos ou em qualquer outro contexto onde a autogestão seja fundamental.
+                      </p>
+                    <p>
+
+Venha fazer parte dessa experiência enriquecedora e assuma o controle de sua própria jornada com confiança e eficácia.
+                      </p>
                   </Palestra>
                   <Palestra title="Almoço" start="12:40" end="14:00" />
                   <!-- <Palestra -->
@@ -526,22 +552,22 @@ No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior
             />
             <SectionPatrocinio
               patrocinadores={patrocinadores.platina}
-              imageClass="h-32"
+              imageClass="h-40"
               titulo="Platina"
             />
             <SectionPatrocinio
               patrocinadores={patrocinadores.ouro}
-              imageClass="h-32"
+              imageClass="h-20"
               titulo="Ouro"
             />
             <SectionPatrocinio
               patrocinadores={patrocinadores.prata}
-              imageClass="h-32"
+              imageClass="h-28"
               titulo="Prata"
             />
             <SectionPatrocinio
               patrocinadores={patrocinadores.bronze}
-              imageClass="h-32"
+              imageClass="h-20"
               titulo="Bronze"
             />
             <SectionPatrocinio
@@ -621,7 +647,7 @@ No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior
       </section>
       <section id="contato" class="text-center px-6 lg:px-8" ">
         <div class="flex justify-center">
-          <Logo class="block h-32 w-auto" alt="Interagil" />
+          <Logo class="block h-32 w-auto" alt="Interágil" />
         </div>
         <p class="font-bold text-2xl">Ficou alguma dúvida? Fale com a gente!</p>
         <p class="mb-6">
