@@ -160,39 +160,6 @@ import Nav from "../components/Nav.astro";
               Ainda temos algumas surpresas a serem anunciadas, então acompanhe
               nossos canais para ficar por dentro de todas as atualizações.
             </p>
-
-            <!-- <p class="mt-6 text-2xl">O Que Esperar do Interágil:</p> -->
-
-            <!-- <p class="mt-6 text-lg leading-8 text-gray-600"> -->
-            <!--   🚀 Palestras Inspiradoras: Junte-se a especialistas e profissionais renomados -->
-            <!--   que compartilharão insights valiosos sobre como a agilidade está -->
-            <!--   transformando empresas e impulsionando resultados. -->
-            <!-- </p> -->
-
-            <!-- <p class="mt-6 text-lg leading-8 text-gray-600"> -->
-            <!--   🤝 Networking Enriquecedor: Conheça outros entusiastas da agilidade, amplie -->
-            <!--   sua rede de contatos e estabeleça conexões que podem impulsionar -->
-            <!--   sua carreira e seus projetos. -->
-            <!-- </p> -->
-
-            <!-- <p class="mt-6 text-lg leading-8 text-gray-600"> -->
-            <!--   🙌 Experiências Práticas: Participe de workshops interativos que o ajudarão a -->
-            <!--   vivenciar na prática os conceitos fundamentais da agilidade, -->
-            <!--   proporcionando-lhe as habilidades necessárias para aplicá-los em -->
-            <!--   qualquer contexto. -->
-            <!-- </p> -->
-
-            <!-- <p class="mt-6 text-lg leading-8 text-gray-600"> -->
-            <!--   🎯 Exploração de Casos de Sucesso: Descubra como empresas locais estão -->
-            <!--   implementando abordagens ágeis para superar desafios e alcançar um -->
-            <!--   crescimento excepcional. -->
-            <!-- </p> -->
-
-            <!-- <p class="mt-6 text-lg leading-8 text-gray-600"> -->
-            <!--   🎉 Celebração e Diversão: Não é apenas um evento, é uma experiência! Desfrute -->
-            <!--   de momentos divertidos e inspiradores enquanto aprende e -->
-            <!--   compartilha conhecimento. -->
-            <!-- </p> -->
           </SectionHeader>
         </div>
       </div>
@@ -337,13 +304,6 @@ import Nav from "../components/Nav.astro";
         </div>
       </div>
 
-      <CtaBanner
-        title="Seja um palestrante no InterÁgil!"
-        text="Faça parte do evento que está impulsionando a agilidade na região."
-        href="https://docs.google.com/forms/d/e/1FAIpQLSd2r8OoI9TdaazmLPbcZ4qkS_pSJPziVsMAws3fijBB_afPww/viewform"
-        cta="Quero ser um palestrante"
-      />
-
       <section id="programacao">
         <div class="bg-white py-12">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -379,17 +339,17 @@ import Nav from "../components/Nav.astro";
             <div class="sm:block tabs-root">
               <div class="border-b border-gray-200">
                 <nav class="-mb-px flex justify-center" aria-label="Tabs">
-                  <!-- <label -->
-                  <!--   for="tab1" -->
-                  <!--   class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm" -->
-                  <!--   >Palco principal</label -->
-                  <!-- > -->
+                  <label
+                    for="tab1"
+                    class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                    >Auditório Principal</label
+                  >
 
-                  <!-- <label -->
-                  <!--   for="tab2" -->
-                  <!--   class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm" -->
-                  <!--   >Palco 2</label -->
-                  <!-- > -->
+                  <label
+                    for="tab2"
+                    class="font-bold border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 w-1/4 border-b-2 py-4 px-1 text-center text-sm"
+                    >Espaço Onovolab</label
+                  >
 
                   <!-- <label -->
                   <!--   for="tab3" -->
@@ -512,18 +472,27 @@ No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior
                 </div>
                 <input type="radio" name="tabs" id="tab2" />
                 <div class="tab content2 px-2 sm:px-10 lg:px-40 md:px-20">
-                  <Palestra title="Workshop 1" start="09:45" end="12:30">
-                    Com pausa para Coffee Break das 10:30 até 11:00
+                  <Palestra title="Coffee Break" start="10:30" end="11:00" />
+                  <Palestra
+                    start="11:10"
+                    end="12:40"
+                    title="Workshop autogestão na Prática"
+                    speaker="Deyse e Danilo"
+                  >
                   </Palestra>
-                  <Palestra title="Workshop 2" start="14:15" end="15:45" />
+                  <Palestra title="Almoço" start="12:40" end="14:00" />
+                  <!-- <Palestra -->
+                  <!--   title="A ser anunciado" -->
+                  <!--   speaker="" -->
+                  <!--   start="14:10" -->
+                  <!--   end="15:40" -->
+
+                  <!-- > -->
+                  <Palestra title="Coffee Break" start="15:50" end="16:20" />
                 </div>
                 <input type="radio" name="tabs" id="tab3" />
-                <div class="tab content3 px-2 sm:px-10 lg:px-40 md:px-20">
-                  <Palestra title="Workshop 3" start="09:45" end="12:30">
-                    Com pausa para Coffee Break das 10:30 até 11:00
-                  </Palestra>
-                  <Palestra title="Workshop 4" start="14:15" end="15:45" />
-                </div>
+                <!-- <div class="tab content3 px-2 sm:px-10 lg:px-40 md:px-20"> -->
+                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -531,48 +500,55 @@ No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior
       </section>
 
       <section id="patrocinadores">
-        <!-- <div class="bg-white py-12"> -->
-        <!-- <div class="mx-auto max-w-7xl px-6 lg:px-8 mb-8"> -->
-        <!--   <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none"> -->
-        <!--     <p class="relative text-sm leading-6 text-primary-700 font-bold"> -->
-        <!--       Patrocinadores -->
-        <!--     </p> -->
-        <!--     <h2 -->
-        <!--       class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" -->
-        <!--     > -->
-        <!--       Parceiros que impulsionam a Agilidade Juntos -->
-        <!--     </h2> -->
-        <!--     <h3 class="text-base mb-6"> -->
-        <!--       Junte-se às empresas que apoiam a inovação e o progresso ágil -->
-        <!--     </h3> -->
-        <!--   </div> -->
-        <!-- </div> -->
-        <!--   <div class="mx-auto max-w-7xl px-6 lg:px-8"> -->
-        <!--     <SectionPatrocinio -->
-        <!--       patrocinadores={patrocinadores.diamante} -->
-        <!--       imageClass="h-32" -->
-        <!--       titulo="Diamante" -->
-        <!--     /> -->
-        <!--     <SectionPatrocinio -->
-        <!--       patrocinadores={patrocinadores.ouro} -->
-        <!--       imageClass="h-24 max-w-[240px]" -->
-        <!--       titulo="Ouro" -->
-        <!--     /> -->
-        <!--     <SectionPatrocinio -->
-        <!--       patrocinadores={patrocinadores.prata} -->
-        <!--       titulo="Prata" -->
-        <!--     /> -->
-        <!--     <SectionPatrocinio -->
-        <!--       patrocinadores={patrocinadores.bronze} -->
-        <!--       titulo="Bronze" -->
-        <!--     /> -->
-        <!--     <SectionPatrocinio -->
-        <!--       patrocinadores={patrocinadores.apoio} -->
-        <!--       titulo="Apoio" -->
-        <!--       imageClass="h-20" -->
-        <!--     /> -->
-        <!--   </div> -->
-        <!-- </div> -->
+        <div class="bg-white py-12">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 mb-8">
+          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+            <p class="relative text-sm leading-6 text-primary-700 font-bold">
+              Patrocinadores
+            </p>
+            <h2
+              class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            >
+              Parceiros que impulsionam a Agilidade Juntos
+            </h2>
+            <h3 class="text-base mb-6">
+              Junte-se às empresas que apoiam a inovação e o progresso ágil
+            </h3>
+          </div>
+        </div>
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <SectionPatrocinio
+              patrocinadores={patrocinadores.diamante}
+              imageClass="h-32"
+              titulo="Diamante"
+            />
+            <SectionPatrocinio
+              patrocinadores={patrocinadores.platina}
+              imageClass="h-32"
+              titulo="Platina"
+            />
+            <SectionPatrocinio
+              patrocinadores={patrocinadores.ouro}
+              imageClass="h-32"
+              titulo="Ouro"
+            />
+            <SectionPatrocinio
+              patrocinadores={patrocinadores.prata}
+              imageClass="h-32"
+              titulo="Prata"
+            />
+            <SectionPatrocinio
+              patrocinadores={patrocinadores.bronze}
+              imageClass="h-32"
+              titulo="Bronze"
+            />
+            <SectionPatrocinio
+              patrocinadores={patrocinadores.apoio}
+              titulo="Apoio"
+              imageClass="h-20"
+            />
+          </div>
+        </div>
       </section>
       <CtaBanner
         title="Torne-se um Patrocinador do Interágil"

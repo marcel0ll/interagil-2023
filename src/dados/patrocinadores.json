@@ -1,16 +1,88 @@
 {
   "diamante": [
+    {
+      "name": "Businessmap",
+      "image": "/patrocinios/businessmap.png",
+      "aspectRatio": "2:1",
+      "link": "https://www.alura.com.br/",
+      "width": 1835,
+      "height": 402
+    }
   ],
-  "ouro": [],
-  "prata": [],
-  "bronze": [],
-  "apoio": [],
+  "platina": [
+    {
+      "name": "beonup",
+      "image": "/patrocinios/beonup.png",
+      "aspectRatio": "2:1",
+      "link": "https://www.beonup.com.br/",
+      "width": 2754,
+      "height": 2413 
+    }
+  ],
+  "ouro": [
+    {
+      "name": "Alura",
+      "image": "/patrocinios/alura.png",
+      "aspectRatio": "2:1",
+      "link": "https://www.alura.com.br/",
+      "width": 1060,
+      "height": 530
+    }
+  ],
+  "prata": [
+    {
+      "name": "Itera",
+      "image": "/patrocinios/itera.png",
+      "aspectRatio": "2:1",
+      "link": "https://itera.com.br/",
+      "width": 1191,
+      "height": 842 
+    }
+  ],
+  "bronze": [
+    {
+      "name": "5by5",
+      "image": "/patrocinios/5by5.png",
+      "aspectRatio": "2:1",
+      "link": "https://5by5.com.br/",
+      "width": 1990,
+      "height": 885
+    }
+  ],
+  "apoio": [
+    {
+      "name": "Onovolab",
+      "image": "/patrocinios/onovolab.png",
+      "aspectRatio": "2:1",
+      "link": "https://onovolab.com/",
+      "width": 691,
+      "height": 600 
+    },
+    {
+      "name": "i2i",
+      "image": "/patrocinios/i2i.png",
+      "aspectRatio": "2:1",
+      "link": "https://i2i.org.br/",
+      "width": 1124,
+      "height": 889 
+    },
+    {
+      "name": "Raia Drogasil",
+      "image": "/patrocinios/rd.png",
+      "aspectRatio": "5:2",
+      "link": "https://rd.com.br/",
+      "width": 1080,
+      "height": 432
+    }
+  ],
   "example": [
     {
       "name": "Seja um patrocinador",
       "image": "./src/components/images/patrocinadores/logo.png",
       "aspectRatio": "1:1",
-      "link": "#"
+      "link": "#",
+      "width": 1080,
+      "height": 432
     }
   ]
 }
