@@ -327,14 +327,12 @@ import Nav from "../components/Nav.astro";
               }
 
               #tab1:checked ~ .content1,
-              #tab2:checked ~ .content2,
-              #tab3:checked ~ .content3 {
+              #tab2:checked ~ .content2 {
                 display: block;
               }
 
               .tabs-root:has(.contents #tab1:checked) nav label:nth-of-type(1),
-              .tabs-root:has(.contents #tab2:checked) nav label:nth-of-type(2),
-              .tabs-root:has(.contents #tab3:checked) nav label:nth-of-type(3) {
+              .tabs-root:has(.contents #tab2:checked) nav label:nth-of-type(2) {
                 color: #68c4a9;
                 font-weight: 700;
                 border-color: currentColor;
@@ -355,11 +353,6 @@ import Nav from "../components/Nav.astro";
                     >Espaço Onovolab</label
                   >
 
-                  <!-- <label -->
-                  <!--   for="tab3" -->
-                  <!--   class="font-bold border-transparent text-gray-500 w-1/4 border-b-2 py-4 px-1 text-center text-sm" -->
-                  <!--   aria-current="page">Palco 3</label -->
-                  <!-- > -->
                 </nav>
               </div>
               <div class="contents">
@@ -386,8 +379,50 @@ import Nav from "../components/Nav.astro";
                   />
                   <Palestra title="Coffee Break" start="10:30" end="11:00" />
                   <Palestra
+                    title="Heróis, vilões ou vítimas, o que realmente está acontecendo na sua empresa? E qual o impacto disso"
+                    speaker="Samuel Cavalcante"
                     start="11:10"
                     end="11:50"
+                  >
+                    <p class="mb-4">
+                      É bom ter gente para nos salvar no dia a dia da empresa
+                      né? Será? Até que ponto isso é bom mesmo?
+                    </p>
+                    <p>
+                      Vou falar um pouco sobre a cultura do herói e os impactos
+                      dela nas empresas, cultura organizacional e do nível de
+                      maturidade da empresa. Passando por dicas de como
+                      identificar e lidar com toda essa cultura e política.
+                    </p>
+                  </Palestra>
+                  <Palestra
+                    title="Da Tradição à Inovação: Liderança, Cultura e Agilidade na Transformação de duas gigantes do mercado de seguro pra transportes."
+                    speaker="Cleiton Martins Borges"
+                    start="12:05"
+                    end="12:45"
+                  >
+                    <p class="mb-4">
+                      Você já se perguntou como empresas centenárias conseguem
+                      se reinventar e se manter no topo?
+                    </p>
+                    <p class="mb-4">
+                      Nesta palestra inspiradora, onde vou explorar a minha
+                      jornada de transformar uma empresa antiga em uma potência
+                      da inovação. Descubra os segredos por trás do sucesso,
+                      explorando os pilares fundamentais de liderança
+                      visionária, uma cultura de adaptabilidade e a agilidade
+                      necessária para se destacar no mercado moderno.
+                    </p>
+                    <p>
+                      Prepare-se para aprender com casos reais e insights
+                      valiosos que o ajudarão a moldar o futuro da sua própria
+                      organização.
+                    </p>
+                  </Palestra>
+                  <Palestra title="Almoço" start="12:45" end="14:00" />
+                  <Palestra
+                    start="14:10"
+                    end="14:50"
                     title="Agilidade com 'Accountability'"
                     speaker="Henrique Gonçalves e Paulo Cassin"
                   >
@@ -419,70 +454,41 @@ import Nav from "../components/Nav.astro";
                     </p>
                   </Palestra>
                   <Palestra
-                    title="Da Tradição à Inovação: Liderança, Cultura e Agilidade na Transformação de duas gigantes do mercado de seguro pra transportes."
-                    speaker="Cleiton Martins Borges"
-                    start="12:00"
-                    end="12:40"
-                  >
-                    <p class="mb-4">
-                      Você já se perguntou como empresas centenárias conseguem
-                      se reinventar e se manter no topo?
-                    </p>
-                    <p class="mb-4">
-                      Nesta palestra inspiradora, onde vou explorar a minha
-                      jornada de transformar uma empresa antiga em uma potência
-                      da inovação. Descubra os segredos por trás do sucesso,
-                      explorando os pilares fundamentais de liderança
-                      visionária, uma cultura de adaptabilidade e a agilidade
-                      necessária para se destacar no mercado moderno.
-                    </p>
-                    <p>
-                      Prepare-se para aprender com casos reais e insights
-                      valiosos que o ajudarão a moldar o futuro da sua própria
-                      organização.
-                    </p>
-                  </Palestra>
-                  <Palestra title="Almoço" start="12:40" end="14:00" />
-                  <Palestra title="Kanbanize - Case de Sucesso" start="14:10" end="14:30" />
+                    title="Talk da RD"
+                    start="15:05"
+                    end="15:25"
+                  />
                   <Palestra
                     title="Agilidade de um projeto começa em como ele é vendido"
                     speaker="Ana Lima e Tiago Tâmega"
-                    start="14:30"
-                    end="14:50"
-
+                    start="15:35"
+                    end="15:55"
                   >
                     <p class="mb-4">
-No universo de agilidade pouco se fala sobre agilidade em serviços, tendo maior foco em agilidade em produtos. Porém, como é a agilidade em uma empresa de serviço? Onde começa a agilidade em uma empresa de serviços? 
-                      </p>
+                      No universo de agilidade pouco se fala sobre agilidade em
+                      serviços, tendo maior foco em agilidade em produtos.
+                      Porém, como é a agilidade em uma empresa de serviço? Onde
+                      começa a agilidade em uma empresa de serviços?
+                    </p>
 
-                      <p>A ideia aqui é rascunhar rapidamente sobre as diferenças entre agilidade em uma empresa de produto e uma empresa de serviços e qual a importância de um comercial especialista em agilidade para vender projetos ágeis.
-                      </p>
-                  </Palestra>
-                  <Palestra
-                    title="Heróis, vilões ou vítimas, o que realmente está acontecendo na sua empresa? E qual o impacto disso"
-                    speaker="Samuel Cavalcante"
-                    start="15:00"
-                    end="15:40"
-                  >
-                    <p class="mb-4">
-É bom ter gente para nos salvar no dia a dia da empresa né? Será? Até que ponto isso é bom mesmo?  
-                      </p>
                     <p>
-                    Vou falar um pouco sobre a cultura do herói e os impactos dela nas empresas, cultura organizacional e do nível de maturidade da empresa. 
-Passando por dicas de como identificar e lidar com toda essa cultura e política.
-                      </p>
+                      A ideia aqui é rascunhar rapidamente sobre as diferenças
+                      entre agilidade em uma empresa de produto e uma empresa de
+                      serviços e qual a importância de um comercial especialista
+                      em agilidade para vender projetos ágeis.
+                    </p>
                   </Palestra>
-                  <Palestra title="Coffee Break" start="15:50" end="16:20" />
+                  <Palestra title="Coffee Break" start="15:55" end="16:25" />
                   <Palestra
                     title="Keynote - Produtividade Sustentável"
                     speaker="Ceci"
-                    start="16:20"
-                    end="17:20"
+                    start="16:25"
+                    end="17:25"
                   />
                   <Palestra
                     title="Encerramento e sorteio de brindes"
-                    start="17:20"
-                    end="17:45"
+                    start="17:25"
+                    end="17:50"
                   />
                 </div>
                 <input type="radio" name="tabs" id="tab2" />
@@ -490,25 +496,44 @@ Passando por dicas de como identificar e lidar com toda essa cultura e política
                   <Palestra title="Coffee Break" start="10:30" end="11:00" />
                   <Palestra
                     start="11:10"
-                    end="12:40"
+                    end="12:45"
+                    title="OKR: não é lista de entregas, é a bússola para caminharmos para a mesma direção."
+                    speaker="Henrique Gonçalves e Paulo Cassin"
+                  />
+                  <Palestra title="Almoço" start="12:45" end="14:00" />
+                  <Palestra
+                    start="14:10"
+                    end="15:55"
                     title="Workshop autogestão na Prática"
                     speaker="Deyse e Danilo"
                   >
-
+                    <p class="mb-4">
+                      Recentemente vimos muitos movimentos apontando a grande
+                      insatisfação das pessoas com trabalho. O Quiet quiting
+                      virou trend, mostrando que a forma como o trabalho
+                      acontece nas organizações precisa começar a mudar.
+                    </p>
 
                     <p class="mb-4">
-Recentemente vimos muitos movimentos apontando a grande insatisfação das pessoas com trabalho. O Quiet quiting virou trend, mostrando que a forma como o trabalho acontece nas organizações precisa começar a mudar.
-                      </p>
-
-                    <p class="mb-4">
-No sentido de transformar as organizações, a autogestão pode ser uma poderosa ferramenta para criar mais espaços de trabalho com autonomia e propósito. Se você está buscando entender melhor sobre autogestão, este workshop é perfeito para você! Nele vamos explorar técnicas práticas para criar acordos claros e definir responsabilidades, além de discutir como tomar decisões de forma integrativa e colaborativa. Você poderá ter contato com conhecimentos valiosos e experiências práticas para que você possa aplicar essas técnicas em seu dia a dia, seja no trabalho, em projetos ou em qualquer outro contexto onde a autogestão seja fundamental.
-                      </p>
+                      No sentido de transformar as organizações, a autogestão
+                      pode ser uma poderosa ferramenta para criar mais espaços
+                      de trabalho com autonomia e propósito. Se você está
+                      buscando entender melhor sobre autogestão, este workshop é
+                      perfeito para você! Nele vamos explorar técnicas práticas
+                      para criar acordos claros e definir responsabilidades,
+                      além de discutir como tomar decisões de forma integrativa
+                      e colaborativa. Você poderá ter contato com conhecimentos
+                      valiosos e experiências práticas para que você possa
+                      aplicar essas técnicas em seu dia a dia, seja no trabalho,
+                      em projetos ou em qualquer outro contexto onde a
+                      autogestão seja fundamental.
+                    </p>
                     <p>
-
-Venha fazer parte dessa experiência enriquecedora e assuma o controle de sua própria jornada com confiança e eficácia.
-                      </p>
+                      Venha fazer parte dessa experiência enriquecedora e assuma
+                      o controle de sua própria jornada com confiança e
+                      eficácia.
+                    </p>
                   </Palestra>
-                  <Palestra title="Almoço" start="12:40" end="14:00" />
                   <!-- <Palestra -->
                   <!--   title="A ser anunciado" -->
                   <!--   speaker="" -->
@@ -516,11 +541,8 @@ Venha fazer parte dessa experiência enriquecedora e assuma o controle de sua pr
                   <!--   end="15:40" -->
 
                   <!-- > -->
-                  <Palestra title="Coffee Break" start="15:50" end="16:20" />
+                  <Palestra title="Coffee Break" start="15:55" end="16:25" />
                 </div>
-                <input type="radio" name="tabs" id="tab3" />
-                <!-- <div class="tab content3 px-2 sm:px-10 lg:px-40 md:px-20"> -->
-                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -529,21 +551,21 @@ Venha fazer parte dessa experiência enriquecedora e assuma o controle de sua pr
 
       <section id="patrocinadores">
         <div class="bg-white py-12">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 mb-8">
-          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <p class="relative text-sm leading-6 text-primary-700 font-bold">
-              Patrocinadores
-            </p>
-            <h2
-              class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-            >
-              Parceiros que impulsionam a Agilidade Juntos
-            </h2>
-            <h3 class="text-base mb-6">
-              Junte-se às empresas que apoiam a inovação e o progresso ágil
-            </h3>
+          <div class="mx-auto max-w-7xl px-6 lg:px-8 mb-8">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+              <p class="relative text-sm leading-6 text-primary-700 font-bold">
+                Patrocinadores
+              </p>
+              <h2
+                class="my-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                Parceiros que impulsionam a Agilidade Juntos
+              </h2>
+              <h3 class="text-base mb-6">
+                Junte-se às empresas que apoiam a inovação e o progresso ágil
+              </h3>
+            </div>
           </div>
-        </div>
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <SectionPatrocinio
               patrocinadores={patrocinadores.diamante}
