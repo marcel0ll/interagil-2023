@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 
 const { patrocinadores, titulo, imageClass } = Astro.props;
 ---
+
 {
   patrocinadores.length > 0 && (
     <div class="mb-8">
@@ -11,14 +12,16 @@ const { patrocinadores, titulo, imageClass } = Astro.props;
       </h2>
       <ul
         role="list"
-        class="flex justify-evenly flex-wrap md:flex-nowrap gap-4"
+        class="flex justify-evenly flex-wrap md:flex-nowrap gap-8 md:gap-4"
       >
         {patrocinadores.map((patrocinador) => {
           return (
             <li class="text-center flex items-center">
               <a href={patrocinador.link} target="_blank" class="inline-block">
                 <Picture
-                  class={`mx-auto object-contain ${imageClass || patrocinador.class || 'h-24'} `}
+                  class={`mx-auto object-contain ${
+                    imageClass || patrocinador.class || "h-24"
+                  } `}
                   widths={[100, 200, 400, 800]}
                   width={patrocinador.width}
                   height={patrocinador.height}

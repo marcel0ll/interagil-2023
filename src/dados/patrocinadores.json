@@ -14,7 +14,7 @@
       "image": "/patrocinios/beonup.png",
       "link": "https://www.beonup.com.br/",
       "width": 2754,
-      "height": 2413 
+      "height": 2413
     }
   ],
   "ouro": [
@@ -32,7 +32,7 @@
       "image": "/patrocinios/itera.png",
       "link": "https://itera.com.br/",
       "width": 1191,
-      "height": 842 
+      "height": 842
     }
   ],
   "bronze": [
@@ -50,14 +50,14 @@
       "image": "/patrocinios/onovolab.png",
       "link": "https://onovolab.com/",
       "width": 691,
-      "height": 600 
+      "height": 600
     },
     {
       "name": "i2i",
       "image": "/patrocinios/i2i.png",
       "link": "https://i2i.org.br/",
       "width": 1124,
-      "height": 889 
+      "height": 889
     },
     {
       "name": "Raia Drogasil",
@@ -65,6 +65,13 @@
       "link": "https://rd.com.br/",
       "width": 1080,
       "height": 432
+    },
+    {
+      "name": "Casa Catarino",
+      "image": "/patrocinios/catarino.png",
+      "link": "https://www.instagram.com/casacatarino/",
+      "width": 1199,
+      "height": 677
     }
   ],
   "example": [
