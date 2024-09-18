@@ -1,0 +1,86 @@
+[
+  {
+    "image": "/palestrantes/cecilia.jpg",
+    "name": "Ceci Fernandes",
+    "_role": "Líder de Global Productivity",
+    "company": "Nubank",
+    "about": "Ceci é líder de Global Productivity no Nubank e organizadora da @agilebrazil. Ela já foi desenvolvedora de software, instrutora, gestora de engenharia, chapter lead de agilistas e é comumente encontrada pelos corredores da comunidade ágil e/ou tomando uma tacinha despretenciosa de vinho.",
+    "linkedin": "https://www.linkedin.com/in/cecifernandes/"
+  },
+  {
+    "image": "/palestrantes/lula.png",
+    "name": "Luiz \"Lula\" Rodrigues",
+    "_role": "Head of Pedagogy & Student Experience",
+    "company": "Escola 42 São Paulo",
+    "about": "Apaixonado por tecnologia, educação e gestão, Lula é atuante em discussões abertas, palestrante e voluntário em grandes eventos de tecnologia e agilidade. Atuou durante anos como consultor e professor em organizações no Brasil e no mundo disseminando melhores formas de gestão do trabalho criativo. Hoje é o Head de Pedagogia da 42 São Paulo, escola de engenharia de software parte de uma rede global com campus em mais de 25 países.",
+    "linkedin": "https://www.linkedin.com/in/lula42/"
+  },
+  {
+    "image": "/palestrantes/cleiton.jpeg",
+    "name": "Cleiton Martins borges",
+    "company": "Nstech",
+    "about": "Ex-Catho, Ex-Dafiti, Ex-ParanaBanco e um Nstecher. Tenho como propósito ajudar as empresas a se tornarem adaptáveis atráves da tecnologia e agilidade, facilitando a mudança de cultura organizacional necessária para a geração de valor. Experiência com transformação nos setores de varejo, educação, cultura, recursos humanos e financeiro. Liderança de equipes globais e multifuncionais, com resultados alcançados através dos pilares de alinhamento estratégico, liderança, desenvolvimento de pessoas e modelo operacional. A transformação é a chave para lidar com o nosso cenário atual e futuro, sempre começando com o foco no cliente e a empatia.",
+    "linkedin": "https://www.linkedin.com/in/cleiton-borges?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    "image": "/palestrantes/henrique.jpg",
+    "name": "Henrique Gonçalves",
+    "company": "Banco BV",
+    "about": "Agilista, prudentino, colecionador de miniaturas e para os íntimos \"Meteoro da Agilidade\". Trabalha atualmente no Banco BV, garantindo os esforços de cada time respectivamente alinhados com as estratégias da organização e buscando mecanismos para alavancar as entregas de forma colaborativa e sustentável. Tem uma experiência de 12 anos em áreas de Tecnologia e Inovação, atuando como consultor em empresas como Bradesco Cartões, Banco Pan e Itaú. Nos últimos 7 anos tem trabalhado com Agilidade, focado na melhoria contínua e resultados de negócio. É voluntário, organizador e/ou participante em diversas eventos e comunidade de agilidade (Agile Trends, Agile Brazil, Scrum Gathering Rio e TDC)",
+    "linkedin": "https://www.linkedin.com/in/henriquefernandesgoncalves/"
+  },
+  {
+    "image": "/palestrantes/paulo.jpeg",
+    "name": "Paulo Cassin",
+    "company": "Nubank",
+    "about": "Com mais de 12 anos em áreas de Tecnologia e Inovação, atualmente é agente de mudanças no Nubank, colaborando para construção de equipes e processos de alta performance. Acredita em modelos agnósticos de métodos na busca pela agilidade e com isso aplica de forma evolucionária práticas e conceitos de acordo com a necessidade e maturidade do contexto. Em suas horas livres gosta de cozinhar, ler, jogar videogame e ficar com a família. É voluntário, organizador e/ou participante em diversos eventos de agilidade (Agile Trends, Agile Brazil e TDC) e comunidades de startups (ZeroOnze, Cotton Valley, etc).",
+    "linkedin": "https://www.linkedin.com/in/pccassin/"
+  },
+  {
+    "image": "/palestrantes/ana.jpeg",
+    "name": "Ana Paula dos Reis Lima",
+    "company": "TakeBlip",
+    "about": "Mineira em terras paulistas. Atualmente é Business Agile, apaixonada por pessoas e pelas relações entre elas. Atua com agilidade há mais de 5 anos e se especializou em agilidade organizacional, ou seja, em como fazer com que uma empresa se adapte às necessidades do mercado. Recentemente, se tornou Embaixadora do Programa Women Techmakers da Google.",
+    "linkedin": "https://www.linkedin.com/in/ana-paula-reis-lima/"
+  },
+  {
+    "image": "/palestrantes/tiago.jpeg",
+    "name": "Tiago Aparecido dos Santos Tâmega",
+    "company": "Tokenlab",
+    "about": "Formado em Análise de Sistemas e com pós em gestão de pessoas, atua com agilidade há mais de 10 anos, porém há 7 como agilista de fato. Já foi desenvolvedor, QA, Scrum Master, Agile Coach e há 2 anos é responsável pelas áreas de Marketing e Vendas na Tokenlab, levando a agilidade para áreas pouco exploradas.",
+    "linkedin": "https://www.linkedin.com/in/tiago-t%C3%A2mega-57227697/"
+  },
+  {
+    "image": "/palestrantes/samuel.jpeg",
+    "name": "Samuel Cavalcante",
+    "company": "K21",
+    "about": "Agile Expert, Trainer e Partner na K21. Eng. de Computação e Esp. em Eng. de Sistemas, atuando como Agile Coach na K21, atuou com Scrum Master na Digix e como docente no ensino superior na UNIDERP e Anhaguera Educacional e na Pós-Graduado na UCDB, experiência em facilitação. Estudante e praticante das melhores práticas Agile.",
+    "linkedin": "https://www.linkedin.com/in/samuelmbc/"
+  },
+  {
+    "image": "/palestrantes/danilo.jpeg",
+    "name": "Danilo Morais",
+    "company": "Radar",
+    "about": "Consultor especialista em Bussiness agility e Product operation com 8+ anos de experiência em gestão de portfólio, product discovery e consultoria executiva em empresas de alto crescimento, incluindo PagSeguro, Invillia, DiviHub, Cetelem, B2W (AME), GFG (Dafiti), Elopar (Alelo) e Exactaworks. Sempre trabalhando em estreita colaboração com stakeholders em todos os níveis para priorizar recursos, facilitar Lean inceptions, design sprints e impulsionar uma mentalidade orientada a dados por meio de experimentação. Apaixonado por capacitar equipes para resolver problemas complexos com soluções centradas no usuário.",
+    "linkedin": "https://www.linkedin.com/in/danilo-morais/"
+  },
+  {
+    "image": "/palestrantes/deyse.jpeg",
+    "name": "Deyse Sande",
+    "company": "Exactaworks",
+    "about": "Designer organizacional e Agile coach. Mestre em Ciência da Computação e Inovação, agilista e apaixonada por criar conexões entre as pessoas",
+    "linkedin": "https://www.linkedin.com/in/deysianesande/"
+  },
+  {
+    "image": "/palestrantes/tatiane.jpeg",
+    "name": "Tatiane Pedroso",
+    "company": "RD",
+    "about": "Sou mãe do Alexandre, do Thomas e da Heloisa, e isso é uma das maiores e mais desafiadoras experiências que pude viver! A Tati Pedroso, Agile Coach, boa ouvinte e de escuta ativa, pró-ativa, fã de construções colaborativas, inquieta, inconformada e amante de problemas, que vocês conhecem hoje, deve muito a essa intensa e louca jornada que é a maternidade! Minha busca contínua é agregar conhecimento por onde passo e deixar lembranças boas nas minhas relações.",
+    "linkedin": "https://www.linkedin.com/in/tatianepedroso/"
+  }
+]
+
+
+
+
+

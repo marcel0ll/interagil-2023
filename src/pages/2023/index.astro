@@ -1,14 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Logo from "../components/images/logo.astro";
-import CtaBanner from "../components/cta-banner.astro";
-import SectionHeader from "../components/section-header.astro";
-import Palestra from "../components/palestra.astro";
-import palestrantes from "../dados/palestrantes.json";
-import patrocinadores from "../dados/patrocinadores.json";
+import Layout from "@/2023/layouts/Layout.astro";
+import Logo from "@/2023/components/images/logo.astro";
+import CtaBanner from "@/2023/components/cta-banner.astro";
+import SectionHeader from "@/2023/components/section-header.astro";
+import Palestra from "@/2023/components/palestra.astro";
+import palestrantes from "@/2023/dados/palestrantes.json";
+import patrocinadores from "@/2023/dados/patrocinadores.json";
 import { Picture } from "astro:assets";
-import SectionPatrocinio from "../components/SectionPatrocinio.astro";
-import Nav from "../components/Nav.astro";
+import SectionPatrocinio from "@/2023/components/SectionPatrocinio.astro";
+import Nav from "@/2023/components/Nav.astro";
 ---
 
 <script>
@@ -80,7 +80,7 @@ import Nav from "../components/Nav.astro";
             width="1280"
             height="1280"
             sizes={""}
-            src="/images/background.png"
+            src="/2023/images/background.png"
             alt="pessoas em anfiteatro ouvindo uma palestra"
           />
         </div>
@@ -726,9 +726,9 @@ import Nav from "../components/Nav.astro";
       <div
         class="text-gray-500 justify-between items-center mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex flex-col sm:flex-row"
       >
-        <span>© 2024 Interágil. Todos os direitos reservados</span>
+        <span>© 2023 Interágil. Todos os direitos reservados</span>
         <div>
-          <a href=`${import.meta.env.BASE_URL}codigo-de-conduta`
+          <a href=`${import.meta.env.BASE_URL}2023/codigo-de-conduta`
             >Código de conduta</a
           >
         </div>

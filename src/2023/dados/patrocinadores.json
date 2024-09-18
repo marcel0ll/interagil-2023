@@ -1,0 +1,86 @@
+{
+  "diamante": [
+    {
+      "name": "Businessmap",
+      "image": "/patrocinios/businessmap.png",
+      "link": "https://businessmap.io/pt",
+      "width": 1835,
+      "height": 402
+    }
+  ],
+  "platina": [
+    {
+      "name": "beonup",
+      "image": "/patrocinios/beonup.png",
+      "link": "https://www.beonup.com.br/",
+      "width": 2754,
+      "height": 2413
+    }
+  ],
+  "ouro": [
+    {
+      "name": "Alura",
+      "image": "/patrocinios/alura.png",
+      "link": "https://www.alura.com.br/",
+      "width": 1060,
+      "height": 530
+    }
+  ],
+  "prata": [
+    {
+      "name": "Itera",
+      "image": "/patrocinios/itera.png",
+      "link": "https://itera.com.br/",
+      "width": 1191,
+      "height": 842
+    }
+  ],
+  "bronze": [
+    {
+      "name": "5by5",
+      "image": "/patrocinios/5by5.png",
+      "link": "https://5by5.com.br/",
+      "width": 1990,
+      "height": 885
+    }
+  ],
+  "apoio": [
+    {
+      "name": "Onovolab",
+      "image": "/patrocinios/onovolab.png",
+      "link": "https://onovolab.com/",
+      "width": 691,
+      "height": 600
+    },
+    {
+      "name": "i2i",
+      "image": "/patrocinios/i2i.png",
+      "link": "https://i2i.org.br/",
+      "width": 1124,
+      "height": 889
+    },
+    {
+      "name": "Raia Drogasil",
+      "image": "/patrocinios/rd.png",
+      "link": "https://rd.com.br/",
+      "width": 1080,
+      "height": 432
+    },
+    {
+      "name": "Casa Catarino",
+      "image": "/patrocinios/catarino.png",
+      "link": "https://www.instagram.com/casacatarino/",
+      "width": 1199,
+      "height": 677
+    }
+  ],
+  "example": [
+    {
+      "name": "Seja um patrocinador",
+      "image": "./src/components/images/patrocinadores/logo.png",
+      "link": "#",
+      "width": 1080,
+      "height": 432
+    }
+  ]
+}
